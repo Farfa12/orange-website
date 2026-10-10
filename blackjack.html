@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blackjack — Velours</title>
+  <meta name="description" content="Table de blackjack en ligne avec side bets Perfect Pairs, 21+3, Lucky Ladies et Bust It. Crédits virtuels uniquement." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/casino.css" />
+  <link rel="stylesheet" href="assets/css/blackjack.css" />
+</head>
+<body>
+  <header data-topbar></header>
+
+  <main class="bj-page">
+    <div class="bj-main">
+      <div class="bj-table" id="table">
+        <span class="dealer-tag">Croupier</span>
+
+        <svg class="arc-text" viewBox="0 0 760 130" aria-hidden="true">
+          <defs>
+            <path id="arc1" d="M 50 34 Q 380 124 710 34" />
+            <path id="arc2" d="M 95 66 Q 380 146 665 66" />
+            <path id="arc3" d="M 30 12 Q 380 108 730 12" />
+          </defs>
+          <use href="#arc3" class="line" />
+          <text class="t1"><textPath href="#arc1" startOffset="50%" text-anchor="middle">BLACKJACK PAYE 3 CONTRE 2</textPath></text>
+          <text class="t2"><textPath href="#arc2" startOffset="50%" text-anchor="middle">LE CROUPIER RESTE SUR TOUS LES 17 · ASSURANCE PAYE 2 CONTRE 1</textPath></text>
+        </svg>
+
+        <div class="shoe" aria-hidden="true">
+          <div class="shoe-body"></div>
+          <div class="shoe-card"></div>
+          <div class="shoe-meter"><i id="shoeMeter"></i></div>
+          <div class="shoe-label" id="shoeLabel">6 jeux</div>
+        </div>
+        <div class="discard" aria-hidden="true">
+          <div class="discard-stack" id="discardStack" style="height:0"></div>
+          <div class="discard-label">Défausse</div>
+        </div>
+
+        <div class="spots" id="spots">
+          <div class="spot side" data-spot="pp" role="button" tabindex="0" aria-label="Mise Perfect Pairs">
+            <div class="spot-circle"><span class="spot-hint">Perfect<br />Pairs</span></div>
+            <span class="spot-label">Perfect Pairs</span>
+          </div>
+          <div class="spot side" data-spot="t213" role="button" tabindex="0" aria-label="Mise 21+3">
+            <div class="spot-circle"><span class="spot-hint">21+3</span></div>
+            <span class="spot-label">21 + 3</span>
+          </div>
+          <div class="spot main" data-spot="main" role="button" tabindex="0" aria-label="Mise principale">
+            <div class="spot-circle"><span class="spot-hint">Mise</span></div>
+            <span class="spot-label">Mise principale</span>
+          </div>
+          <div class="spot side" data-spot="ll" role="button" tabindex="0" aria-label="Mise Lucky Ladies">
+            <div class="spot-circle"><span class="spot-hint">Lucky<br />Ladies</span></div>
+            <span class="spot-label">Lucky Ladies</span>
+          </div>
+          <div class="spot side" data-spot="bust" role="button" tabindex="0" aria-label="Mise Bust It">
+            <div class="spot-circle"><span class="spot-hint">Bust<br />It</span></div>
+            <span class="spot-label">Bust It</span>
+          </div>
+        </div>
+
+        <div class="card-layer" id="cardLayer"></div>
+        <div class="bj-msg" id="msg" aria-live="polite"></div>
+
+        <div class="prompt" id="insPrompt">
+          <p>Assurance ?<small id="insCost"></small></p>
+          <button class="btn btn-green" id="insYes">Oui</button>
+          <button class="btn" id="insNo">Non</button>
+        </div>
+      </div>
+
+      <div class="panel bj-controls">
+        <div class="group" id="betGroup">
+          <div class="chip-tray" id="chipTray" aria-label="Choix du jeton"></div>
+          <button class="btn" id="btnClear">Effacer</button>
+          <button class="btn" id="btnRebet">Rejouer</button>
+          <button class="btn" id="btnDouble">×2</button>
+          <button class="btn btn-gold btn-lg deal-btn" id="btnDeal">DISTRIBUER</button>
+        </div>
+        <div class="group" id="playGroup" hidden>
+          <button class="btn btn-green btn-lg act" id="btnHit">Tirer <kbd>H</kbd></button>
+          <button class="btn btn-red btn-lg act" id="btnStand">Rester <kbd>S</kbd></button>
+          <button class="btn btn-blue btn-lg act" id="btnDoubleDown">Doubler <kbd>D</kbd></button>
+          <button class="btn btn-lg act" id="btnSplit">Séparer <kbd>P</kbd></button>
+          <button class="btn btn-lg act" id="btnSurrender">Abandon <kbd>R</kbd></button>
+        </div>
+        <div class="group" id="overGroup" hidden>
+          <button class="btn btn-lg" id="btnNew">Nouvelle mise</button>
+          <button class="btn btn-gold btn-lg deal-btn" id="btnRedeal">REJOUER LA MISE <kbd>Entrée</kbd></button>
+        </div>
+        <label class="toggle"><input type="checkbox" id="hintToggle" /> Conseils (stratégie de base)</label>
+      </div>
+      <p class="help">Clic sur une case : poser un jeton · Clic droit : retirer · Les side bets nécessitent une mise principale · <kbd>Entrée</kbd> distribuer · <kbd>H</kbd> <kbd>S</kbd> <kbd>D</kbd> <kbd>P</kbd> <kbd>R</kbd> pendant la main</p>
+    </div>
+
+    <aside class="bj-side">
+      <div class="panel side-card">
+        <h3>Session</h3>
+        <div class="statgrid">
+          <div class="stat"><small>Mains</small><strong id="stHands">0</strong></div>
+          <div class="stat"><small>Gagnées</small><strong id="stWins">0</strong></div>
+          <div class="stat"><small>Blackjacks</small><strong id="stBj">0</strong></div>
+          <div class="stat"><small>Résultat net</small><strong id="stNet">0</strong></div>
+        </div>
+      </div>
+      <div class="panel side-card">
+        <h3>Perfect Pairs</h3>
+        <table>
+          <tr><td>Paire mixte (couleurs différentes)</td><td>6 : 1</td></tr>
+          <tr><td>Paire de couleur (même couleur)</td><td>12 : 1</td></tr>
+          <tr><td>Paire parfaite (même enseigne)</td><td>25 : 1</td></tr>
+        </table>
+      </div>
+      <div class="panel side-card">
+        <h3>21 + 3</h3>
+        <table>
+          <tr><td>Couleur</td><td>5 : 1</td></tr>
+          <tr><td>Suite</td><td>10 : 1</td></tr>
+          <tr><td>Brelan</td><td>30 : 1</td></tr>
+          <tr><td>Quinte flush</td><td>40 : 1</td></tr>
+          <tr><td>Brelan assorti</td><td>100 : 1</td></tr>
+        </table>
+      </div>
+      <div class="panel side-card">
+        <h3>Lucky Ladies</h3>
+        <table>
+          <tr><td>Total de 20</td><td>4 : 1</td></tr>
+          <tr><td>20 assorti</td><td>10 : 1</td></tr>
+          <tr><td>20 identique</td><td>25 : 1</td></tr>
+          <tr><td>Paire de dames de cœur</td><td>200 : 1</td></tr>
+          <tr><td>Dames de cœur + BJ croupier</td><td>1000 : 1</td></tr>
+        </table>
+      </div>
+      <div class="panel side-card">
+        <h3>Bust It</h3>
+        <table>
+          <tr><td>Croupier saute en 3 cartes</td><td>1 : 1</td></tr>
+          <tr><td>4 cartes</td><td>2 : 1</td></tr>
+          <tr><td>5 cartes</td><td>9 : 1</td></tr>
+          <tr><td>6 cartes</td><td>50 : 1</td></tr>
+          <tr><td>7 cartes</td><td>100 : 1</td></tr>
+          <tr><td>8 cartes ou plus</td><td>250 : 1</td></tr>
+        </table>
+      </div>
+      <div class="panel side-card">
+        <h3>Règles de la table</h3>
+        <ul>
+          <li>Sabot de 6 jeux, mélangé à ~75 %</li>
+          <li>Le croupier reste sur tous les 17</li>
+          <li>Blackjack payé 3 : 2, assurance 2 : 1</li>
+          <li>Doubler sur 2 cartes, y compris après séparation</li>
+          <li>Séparer jusqu'à 4 mains (As : une carte chacun)</li>
+          <li>Abandon tardif autorisé (moitié rendue)</li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <p class="footer-note"><strong>Jeu de démonstration.</strong> Crédits 100 % virtuels, sans aucune valeur monétaire — aucun argent réel n'est misé ni gagné.<br />Le jeu d'argent réel peut créer une dépendance : en France, Joueurs Info Service — 09 74 75 13 13.</p>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/blackjack.js"></script>
+</body>
+</html>

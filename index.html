@@ -3,1386 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Orange — Premium</title>
-  <meta name="description" content="Orange, une présentation premium d'entreprise de télécommunications et de services numériques." />
+  <title>Velours Casino</title>
+  <meta name="description" content="Velours, casino virtuel de démonstration : roulette européenne réaliste et blackjack avec side bets. Crédits virtuels uniquement, sans argent réel." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/casino.css" />
   <style>
-    :root {
-      --orange: #ff7900;
-      --orange-2: #ff9f43;
-      --orange-3: #ffd5a0;
-      --orange-4: #fff3e8;
-      --dark: #171a1f;
-      --dark-2: #222933;
-      --text: #1c2430;
-      --muted: #5d6774;
-      --white: #ffffff;
-      --line: rgba(17, 24, 39, 0.08);
-      --shadow: 0 20px 50px rgba(22, 28, 45, 0.08);
-      --radius: 26px;
-      --container: 1180px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(255,121,0,0.07), transparent 35%),
-        linear-gradient(180deg, #fffdfb 0%, #f7f7f7 100%);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a { color: inherit; text-decoration: none; }
-    img, svg { display: block; max-width: 100%; }
-    ul, ol { padding-left: 1.2rem; }
-    li { margin-bottom: 0.55rem; }
-
-    .container {
-      width: min(var(--container), calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    .section {
-      padding: 100px 0;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--orange);
-      background: rgba(255, 121, 0, 0.08);
-      padding: 8px 12px;
-      border-radius: 999px;
-      margin-bottom: 18px;
-    }
-
-    h1, h2, h3, h4 { margin: 0 0 18px; line-height: 1.1; }
-    h1 { font-size: clamp(2.7rem, 5vw, 5rem); }
-    h2 { font-size: clamp(2rem, 3vw, 3rem); }
-    p { margin: 0 0 18px; color: var(--muted); }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(12px);
-      background: rgba(255, 121, 0, 0.88);
-      border-bottom: 1px solid rgba(255,255,255,0.15);
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      min-height: 80px;
-      color: white;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      font-size: 1.65rem;
-      letter-spacing: 0.04em;
-    }
-
-    .brand-mark {
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #fff 0%, #ffe7d0 100%);
-      display: grid;
-      place-items: center;
-      color: var(--orange);
-      font-weight: 900;
-      font-size: 1.2rem;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 26px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      color: rgba(255,255,255,0.95);
-      font-weight: 700;
-      font-size: 0.96rem;
-      transition: opacity 0.2s ease;
-    }
-
-    .nav-links a:hover { opacity: 0.8; }
-
-    .nav-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: white;
-      color: var(--orange);
-      padding: 12px 20px;
-      border-radius: 999px;
-      font-weight: 800;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-
     .hero {
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(135deg, #ff7a00 0%, #ff9f43 38%, #ffb86b 100%);
-      color: white;
-      padding: 68px 0 80px;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.22), transparent 22%),
-        radial-gradient(circle at 85% 15%, rgba(255,255,255,0.12), transparent 26%),
-        radial-gradient(circle at 50% 100%, rgba(16, 28, 56, 0.08), transparent 35%);
-    }
-
-    .hero-inner {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 35px;
-      align-items: center;
-    }
-
-    .hero-copy h1 {
-      margin-bottom: 22px;
-      color: white;
-    }
-
-    .hero-copy p {
-      max-width: 630px;
-      font-size: 1.2rem;
-      color: rgba(255,255,255,0.9);
-      margin-bottom: 28px;
-    }
-
-    .cta-row {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 28px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 15px 26px;
-      border-radius: 999px;
-      font-weight: 800;
-      border: 1px solid transparent;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-
-    .btn-primary {
-      background: white;
-      color: var(--orange);
-      box-shadow: 0 18px 35px rgba(0,0,0,0.12);
-    }
-
-    .btn-secondary {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.25);
-      color: white;
-    }
-
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(110px, 1fr));
-      gap: 18px;
-      max-width: 540px;
-    }
-
-    .stat {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 18px;
-      padding: 18px 14px;
+      max-width: 1280px; margin: 0 auto;
+      padding: clamp(40px, 7vw, 90px) clamp(16px, 3vw, 36px) clamp(24px, 4vw, 40px);
       text-align: center;
-      backdrop-filter: blur(4px);
     }
-
-    .stat strong {
-      display: block;
-      font-size: clamp(1.3rem, 2.2vw, 2rem);
-      margin-bottom: 5px;
+    .hero h1 {
+      margin: 14px 0 12px;
+      font-family: var(--font-display); font-weight: 800;
+      font-size: clamp(2.3rem, 6vw, 4.6rem); letter-spacing: 0.08em; line-height: 1.05;
+      background: linear-gradient(180deg, #fff6d6 0%, var(--gold-2) 40%, var(--gold) 70%, #8a6d1d 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      text-shadow: 0 10px 40px rgba(212, 175, 55, 0.15);
     }
-
-    .stat span {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.82);
+    .hero p { margin: 0 auto; max-width: 620px; color: var(--muted); font-size: clamp(1rem, 1.6vw, 1.12rem); line-height: 1.7; }
+    .games {
+      max-width: 1280px; margin: 0 auto;
+      padding: 0 clamp(16px, 3vw, 36px);
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: clamp(16px, 2.5vw, 28px);
     }
-
-    .hero-visual {
-      position: relative;
-      min-height: 470px;
-      display: grid;
-      place-items: center;
-    }
-
-    .orb {
-      position: absolute;
-      width: 340px;
-      height: 340px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.42), rgba(255,255,255,0.08) 35%, rgba(255,255,255,0.02) 60%, transparent 70%);
-      filter: blur(4px);
-      top: 58px;
-      right: 70px;
-    }
-
-    .device-scene {
-      position: relative;
-      width: 310px;
-      height: 420px;
-      perspective: 1200px;
-      transform: rotate(-10deg);
-    }
-
-    .device {
-      position: absolute;
-      width: 193px;
-      height: 370px;
-      left: 58px;
-      top: 10px;
-      transform-style: preserve-3d;
-      animation: floatDevice 5.5s ease-in-out infinite;
-    }
-
-    @keyframes floatDevice {
-      0%, 100% { transform: rotateX(15deg) rotateY(-22deg) translateY(0); }
-      50% { transform: rotateX(12deg) rotateY(-18deg) translateY(-12px); }
-    }
-
-    .phone-shell {
-      position: absolute;
-      inset: 0;
-      border-radius: 30px;
-      background: linear-gradient(155deg, #1b1d22 0%, #0d0f14 100%);
-      border: 4px solid rgba(26, 30, 35, 0.9);
-      box-shadow: 0 28px 50px rgba(12, 15, 20, 0.32);
-      transform: translateZ(18px);
-    }
-
-    .screen {
-      position: absolute;
-      inset: 18px 16px 20px;
-      background: linear-gradient(160deg, #ff7a00 0%, #ffbf80 100%);
-      border-radius: 22px;
-      border: 2px solid rgba(255,255,255,0.26);
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .screen::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(150deg, rgba(255,255,255,0.28), transparent 28%, rgba(255,255,255,0.08) 45%, transparent 60%);
-    }
-
-    .screen-content {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      height: 100%;
-      display: grid;
-      place-items: center;
-      color: white;
-      font-size: 2.1rem;
-      font-weight: 900;
-      letter-spacing: 0.06em;
-      text-shadow: 0 6px 20px rgba(0,0,0,0.12);
-    }
-
-    .camera {
-      position: absolute;
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 38% 35%, #7a7a7a 0%, #1e1e1e 28%, #030303 62%);
-      border: 3px solid rgba(255,255,255,0.3);
-      top: 18px;
-      left: 18px;
-      z-index: 4;
-    }
-
-    .notch {
-      position: absolute;
-      top: 16px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 72px;
-      height: 12px;
-      background: rgba(15,15,15,0.78);
-      border-radius: 999px;
-      z-index: 4;
-    }
-
-    .device-side {
-      position: absolute;
-      background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(0,0,0,0.28));
-      border: 2px solid rgba(255,255,255,0.12);
-    }
-
-    .side-left, .side-right {
-      width: 16px;
-      height: 332px;
-      top: 19px;
-      left: 88px;
-      background: linear-gradient(180deg, #1d2127, #090b12);
-    }
-
-    .side-left { transform: rotateY(90deg) translateZ(26px); }
-    .side-right { transform: rotateY(90deg) translateZ(-26px); }
-
-    .side-top, .side-bottom {
-      width: 170px;
-      height: 16px;
-      top: 177px;
-      left: 12px;
-      background: linear-gradient(90deg, #0b0d12, #232933);
-    }
-
-    .side-top { transform: rotateX(90deg) translateZ(26px); }
-    .side-bottom { transform: rotateX(90deg) translateZ(-26px); }
-
-    .badge-floating {
-      position: absolute;
-      right: 26px;
-      bottom: 45px;
-      background: rgba(255,255,255,0.18);
-      border: 1px solid rgba(255,255,255,0.2);
-      backdrop-filter: blur(8px);
-      color: white;
-      padding: 14px 18px;
-      border-radius: 18px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-      font-weight: 700;
-      transform: rotate(9deg);
-    }
-
-    .panel {
-      background: rgba(255,255,255,0.72);
-      border: 1px solid rgba(17,24,39,0.07);
-      border-radius: var(--radius);
+    .game {
+      position: relative; overflow: hidden; isolation: isolate;
+      display: grid; grid-template-rows: 300px auto;
+      border-radius: 26px; border: 1px solid var(--line);
+      background: var(--panel-solid);
       box-shadow: var(--shadow);
+      transition: transform .35s cubic-bezier(.2, .8, .2, 1), box-shadow .35s, border-color .35s;
     }
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 34px;
-      align-items: center;
-    }
-
-    .copy-card {
-      padding: 32px 28px;
-    }
-
-    .feature-list {
-      margin-top: 26px;
-      display: grid;
-      gap: 14px;
-    }
-
-    .feature-list li {
-      list-style: none;
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      color: var(--text);
-      margin: 0;
-      font-weight: 600;
-    }
-
-    .feature-list li::before {
-      content: "✓";
-      width: 24px;
-      height: 24px;
-      display: inline-grid;
-      place-items: center;
-      border-radius: 50%;
-      background: rgba(255, 121, 0, 0.1);
-      color: var(--orange);
-      font-weight: 900;
-      flex-shrink: 0;
-    }
-
-    .visual-card {
-      padding: 26px;
-      background: linear-gradient(135deg, rgba(255,121,0,0.08), rgba(255,177,95,0.1));
-    }
-
-    .globe-wrap {
-      width: 100%;
-      aspect-ratio: 1.2;
-      display: grid;
-      place-items: center;
-      background: radial-gradient(circle at center, rgba(255,255,255,0.7), rgba(255,255,255,0.18));
-      border-radius: 28px;
-      border: 1px solid rgba(255,121,0,0.08);
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 24px;
-      margin-top: 42px;
-    }
-
-    .service-card {
+    .game:hover { transform: translateY(-6px); border-color: rgba(212, 175, 55, 0.55); box-shadow: 0 34px 80px rgba(0, 0, 0, 0.6), 0 0 50px rgba(212, 175, 55, 0.12); }
+    .game-art { position: relative; overflow: hidden; display: grid; place-items: center; }
+    .game-art.roulette { background: radial-gradient(circle at 50% 60%, #155c3c, #062818 70%); }
+    .game-art.blackjack { background: radial-gradient(ellipse at 50% 30%, #13784c, #073a24 75%); }
+    .mini-wheel {
+      width: 250px; height: 250px; border-radius: 50%;
+      background:
+        radial-gradient(circle, #f6dc8a 0 5%, #b9bdc3 5.5% 9%, #8a4a22 9.5% 30%, #6b3416 40%, #4a220d 52%, #d4af37 52.5% 54.5%, transparent 55%),
+        repeating-conic-gradient(from -4.86deg, rgba(0,0,0,0) 0 9.2deg, #e3e6ea 9.2deg 9.73deg),
+        radial-gradient(circle, transparent 0 74%, rgba(0,0,0,0.35) 74.5% 76%, transparent 76.5%),
+        repeating-conic-gradient(from -4.86deg, #b3121c 0 9.73deg, #121212 9.73deg 19.46deg);
+      box-shadow: 0 0 0 10px #3a1a0a, 0 0 0 13px #d4af37, 0 0 0 30px #241005, 0 20px 50px rgba(0, 0, 0, 0.7);
+      animation: spinSlow 18s linear infinite;
       position: relative;
-      padding: 26px 22px 22px;
-      overflow: hidden;
-      background: white;
-      border: 1px solid rgba(17,24,39,0.06);
-      border-radius: 22px;
-      box-shadow: 0 16px 32px rgba(17,24,39,0.04);
-      transition: transform 0.3s ease, box-shadow 0.25s ease;
     }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 24px 40px rgba(17,24,39,0.08);
+    .mini-wheel::before { /* case verte du zéro */
+      content: ""; position: absolute; left: 50%; top: 0; width: 22px; height: 50%;
+      transform: translateX(-50%); transform-origin: bottom center;
+      background: linear-gradient(180deg, #0b7a3e 0 42%, transparent 42%);
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
     }
-
-    .service-icon {
-      width: 70px;
-      height: 70px;
-      border-radius: 18px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 18px;
-      background: linear-gradient(140deg, rgba(255,121,0,0.15), rgba(255,121,0,0.04));
+    .mini-ball {
+      position: absolute; width: 16px; height: 16px; border-radius: 50%;
+      left: 50%; top: 50%; margin: -8px;
+      background: radial-gradient(circle at 35% 30%, #fff, #c8c8c8 70%, #888);
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+      animation: orbit 2.6s linear infinite;
     }
-
-    .service-card h3 {
-      margin-bottom: 10px;
-      font-size: 1.35rem;
-      color: var(--dark);
+    @keyframes spinSlow { to { transform: rotate(360deg); } }
+    @keyframes orbit { from { transform: rotate(0deg) translateX(146px); } to { transform: rotate(-360deg) translateX(146px); } }
+    .fan { position: relative; width: 300px; height: 200px; }
+    .fan .pc {
+      position: absolute; left: 50%; bottom: 0; width: 110px; height: 154px; margin-left: -55px;
+      border-radius: 10px; transform-origin: 50% 110%;
+      background: linear-gradient(160deg, #fff, #ece7da);
+      color: #15171c;
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.1);
+      font: 700 30px Georgia, serif; padding: 10px 12px; line-height: 0.9;
+      transition: transform .5s cubic-bezier(.2, .8, .2, 1);
     }
-
-    .service-card p {
-      margin-bottom: 0;
-      color: var(--muted);
-      font-size: 0.98rem;
+    .fan .pc span { display: block; font-size: 26px; }
+    .fan .pc b { position: absolute; left: 50%; top: 52%; transform: translate(-50%, -50%); font-size: 64px; font-weight: 400; }
+    .fan .pc.r { color: #c8102e; }
+    .fan .pc:nth-child(1) { transform: rotate(-16deg) translateX(-40px); }
+    .fan .pc:nth-child(2) { transform: rotate(10deg) translateX(40px); }
+    .game:hover .fan .pc:nth-child(1) { transform: rotate(-22deg) translateX(-56px) translateY(-6px); }
+    .game:hover .fan .pc:nth-child(2) { transform: rotate(16deg) translateX(56px) translateY(-6px); }
+    .fan .chips { position: absolute; right: -10px; bottom: -6px; display: flex; }
+    .fan .chips .chip { margin-left: -18px; }
+    .game-body { padding: 24px 26px 26px; display: grid; gap: 12px; }
+    .game-body h2 { margin: 0; font-family: var(--font-display); font-size: 1.7rem; letter-spacing: 0.08em; }
+    .game-body p { margin: 0; color: var(--muted); line-height: 1.65; font-size: 0.95rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tags span { padding: 5px 10px; border-radius: 999px; font-size: 0.74rem; font-weight: 600; background: rgba(212, 175, 55, 0.1); color: var(--gold-2); border: 1px solid var(--line); }
+    .game .btn { justify-self: start; margin-top: 6px; }
+    .game > a.cover { position: absolute; inset: 0; z-index: 2; }
+    .soon {
+      max-width: 1280px; margin: clamp(24px, 4vw, 40px) auto 0; padding: 0 clamp(16px, 3vw, 36px);
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 14px;
     }
-
-    .products-wrap {
-      margin-top: 36px;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 28px;
-    }
-
-    .product-card {
-      background: white;
-      border: 1px solid rgba(17,24,39,0.06);
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 16px 42px rgba(17,24,39,0.06);
-    }
-
-    .phone-scene {
-      position: relative;
-      height: 340px;
-      background: radial-gradient(circle at 50% 30%, #fff2e5, #ffd9b3 60%, #f0f0f0 100%);
-      display: grid;
-      place-items: center;
-      perspective: 1000px;
-      cursor: grab;
-      user-select: none;
-      touch-action: pan-y;
-    }
-
-    .phone-scene:active { cursor: grabbing; }
-
-    .mini-phone {
-      position: relative;
-      width: 122px;
-      height: 245px;
-      transform-style: preserve-3d;
-      --g: #ff7900;
-      animation: idleTilt 6s ease-in-out infinite;
-    }
-
-    @keyframes idleTilt {
-      0%, 100% { transform: rotateX(10deg) rotateY(-20deg) translateY(0); }
-      50% { transform: rotateX(12deg) rotateY(18deg) translateY(-8px); }
-    }
-
-    .mini-face {
-      position: absolute;
-      border-radius: 18px;
-      background: var(--g);
-    }
-
-    .mini-front {
-      width: 122px;
-      height: 245px;
-      transform: translateZ(10px);
-      border: 5px solid #111;
-      overflow: hidden;
-      background: #070b13;
-    }
-
-    .mini-screen {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(160deg, var(--g), #fff1cf);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 800;
-      font-size: 1.55rem;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.18);
-    }
-
-    .mini-notch { 
-      position: absolute;
-      top: 8px;
-      left: 50%;
-      width: 36px;
-      height: 8px;
-      margin-left: -18px;
-      background: rgba(7,11,19,0.9);
-      border-radius: 10px;
-      z-index: 3;
-    }
-
-    .mini-back {
-      width: 122px;
-      height: 245px;
-      transform: rotateY(180deg) translateZ(10px);
-      background: linear-gradient(150deg, color-mix(in srgb, var(--g) 82%, black), color-mix(in srgb, var(--g) 55%, white));
-    }
-
-    .mini-camera {
-      position: absolute;
-      top: 18px;
-      left: 18px;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: radial-gradient(circle, #3b3b3b 0%, #171717 22%, #000 70%);
-      border: 2px solid rgba(255,255,255,0.35);
-    }
-
-    .mini-left, .mini-right {
-      width: 14px;
-      height: 238px;
-      left: 54px;
-      top: 3px;
-      background: color-mix(in srgb, var(--g) 70%, black);
-    }
-
-    .mini-left { transform: rotateY(-90deg) translateZ(61px); }
-    .mini-right { transform: rotateY(90deg) translateZ(61px); }
-
-    .mini-top, .mini-bottom {
-      width: 118px;
-      height: 14px;
-      left: 2px;
-      top: 116px;
-      background: color-mix(in srgb, var(--g) 55%, black);
-    }
-
-    .mini-top { transform: rotateX(90deg) translateZ(122px); }
-    .mini-bottom { transform: rotateX(-90deg) translateZ(122px); }
-
-    .product-info {
-      padding: 18px 20px 22px;
-    }
-
-    .product-info h3 {
-      font-size: 1.7rem;
-      margin-bottom: 6px;
-      color: var(--dark);
-    }
-
-    .tagline {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 16px;
-    }
-
-    .product-info ul {
-      margin: 0 0 18px;
-      padding-left: 1.1rem;
-      color: var(--muted);
-    }
-
-    .price-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-top: 10px;
-    }
-
-    .price {
-      font-size: 1.7rem;
-      font-weight: 900;
-      color: var(--orange);
-    }
-
-    .price small {
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: var(--muted);
-    }
-
-    .swatches {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .swatch {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      border: 2px solid white;
-      box-shadow: 0 0 0 1px #cfcfcf;
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .swatch:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 0 2px rgba(255,121,0,0.4);
-    }
-
-    .pricing {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-      margin-top: 36px;
-    }
-
-    .price-card {
-      position: relative;
-      background: white;
-      border: 1px solid rgba(17,24,39,0.06);
-      border-radius: 24px;
-      padding: 28px 22px;
-      box-shadow: 0 16px 36px rgba(17,24,39,0.05);
-    }
-
-    .price-card.featured {
-      background: linear-gradient(180deg, #fffaf5 0%, #fff3e7 100%);
-      border-color: rgba(255,121,0,0.3);
-      transform: scale(1.02);
-    }
-
-    .pill {
-      position: absolute;
-      right: 18px;
-      top: 18px;
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      background: rgba(255,121,0,0.1);
-      color: var(--orange);
-      border-radius: 999px;
-      padding: 7px 10px;
-    }
-
-    .price-card h3 {
-      margin-bottom: 12px;
-      font-size: 1.45rem;
-    }
-
-    .amount {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-      margin-bottom: 16px;
-      color: var(--dark);
-    }
-
-    .amount strong {
-      font-size: clamp(2rem, 3vw, 2.9rem);
-      color: var(--orange);
-    }
-
-    .amount span {
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .benefits {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 22px;
-      display: grid;
-      gap: 12px;
-    }
-
-    .benefits li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin: 0;
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    .benefits li::before {
-      content: "•";
-      color: var(--orange);
-      font-size: 1.5rem;
-      line-height: 1;
-    }
-
-    .clients-logos {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 28px;
-    }
-
-    .logo-box {
-      height: 90px;
-      display: grid;
-      place-items: center;
-      border-radius: 18px;
-      border: 1px solid rgba(17,24,39,0.06);
-      background: white;
-      color: var(--dark-2);
-      font-weight: 900;
-      letter-spacing: 0.08em;
-      font-size: 1.05rem;
-      box-shadow: 0 14px 26px rgba(17,24,39,0.04);
-    }
-
-    .quote {
-      margin-top: 26px;
-      padding: 30px 26px;
-      background: linear-gradient(135deg, rgba(255,121,0,0.08), rgba(255,255,255,0.65));
-      border: 1px solid rgba(255,121,0,0.08);
-      border-radius: 22px;
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      gap: 18px;
-      align-items: center;
-    }
-
-    .quote-mark {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--orange), var(--orange-2));
-      display: grid;
-      place-items: center;
-      color: white;
-      font-size: 2rem;
-      font-weight: 900;
-    }
-
-    .quote p {
-      margin: 0;
-      font-size: 1.05rem;
-      color: var(--dark-2);
-      font-weight: 600;
-    }
-
-    .quote strong {
-      color: var(--orange);
-      display: block;
-      margin-top: 8px;
-      font-size: 0.95rem;
-    }
-
-    .final-cta {
-      background: linear-gradient(135deg, #ff7900, #ff9f43);
-      color: white;
-      border-radius: 26px;
-      padding: 32px 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      box-shadow: 0 18px 40px rgba(255,121,0,0.20);
-      margin-top: 32px;
-    }
-
-    .final-cta h3 {
-      color: white;
-      margin-bottom: 8px;
-      font-size: 2rem;
-    }
-
-    .final-cta p {
-      margin: 0;
-      color: rgba(255,255,255,0.86);
-    }
-
-    footer {
-      background: var(--dark);
-      color: rgba(255,255,255,0.76);
-      padding: 32px 0 36px;
-    }
-
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-
-    .footer-links a {
-      color: rgba(255,255,255,0.82);
-      font-weight: 700;
-    }
-
-    @media (max-width: 980px) {
-      .hero-inner,
-      .intro-grid,
-      .product-grid,
-      .pricing,
-      .services-grid,
-      .clients-logos {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .hero-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-visual {
-        min-height: 380px;
-      }
-
-      .product-grid,
-      .pricing {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 700px) {
-      nav {
-        padding: 16px 0;
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        width: 100%;
-        justify-content: flex-start;
-      }
-
-      .hero { padding-top: 42px; }
-      .hero-stats {
-        grid-template-columns: 1fr;
-      }
-
-      .services-grid,
-      .clients-logos,
-      .intro-grid,
-      .product-grid,
-      .pricing {
-        grid-template-columns: 1fr;
-      }
-
-      .final-cta {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .quote {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
+    .soon div { padding: 18px 20px; border-radius: 16px; border: 1px dashed rgba(255, 255, 255, 0.1); color: var(--muted); font-size: 0.88rem; }
+    .soon strong { display: block; color: var(--text); font-family: var(--font-display); letter-spacing: 0.08em; margin-bottom: 4px; }
+    @media (max-width: 720px) {
+      .game { grid-template-rows: 240px auto; }
+      .mini-wheel { width: 180px; height: 180px; }
+      @keyframes orbit { from { transform: rotate(0deg) translateX(108px); } to { transform: rotate(-360deg) translateX(108px); } }
+      .fan { transform: scale(0.8); }
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <div class="container">
-      <nav>
-        <div class="brand" aria-label="Orange logo">
-          <div class="brand-mark">O</div>
-          <span>Orange</span>
-        </div>
-
-        <div class="nav-links">
-          <a href="#presentation">Présentation</a>
-          <a href="#activites">Activités</a>
-          <a href="#telephones">Téléphones 3D</a>
-          <a href="#offres">Offres</a>
-          <a href="#clients">Clients</a>
-          <a href="#contact">Contact</a>
-        </div>
-
-        <a class="nav-cta" href="#telephones">Découvrir</a>
-      </nav>
-    </div>
-  </header>
+  <header data-topbar></header>
 
   <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <div class="eyebrow">Télécommunications premium</div>
-        <h1>La connectivité qui accompagne chaque instant.</h1>
-        <p>Orange réunit le mobile, l’Internet, la fibre et les services numériques pour une expérience fluide, claire et durable au quotidien.</p>
-
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#offres">Voir les offres</a>
-          <a class="btn btn-secondary" href="#telephones">Découvrir les modèles</a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="stat">
-            <strong>+35M</strong>
-            <span>clients connectés</span>
-          </div>
-          <div class="stat">
-            <strong>5G</strong>
-            <span>réseau mobile</span>
-          </div>
-          <div class="stat">
-            <strong>24/7</strong>
-            <span>service client</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-visual" aria-label="Illustration de smartphone Orange">
-        <div class="orb"></div>
-        <div class="device-scene">
-          <div class="device">
-            <div class="phone-shell"></div>
-            <div class="camera"></div>
-            <div class="notch"></div>
-            <div class="screen">
-              <div class="screen-content">O</div>
-            </div>
-            <div class="device-side side-left"></div>
-            <div class="device-side side-right"></div>
-            <div class="device-side side-top"></div>
-            <div class="device-side side-bottom"></div>
-          </div>
-        </div>
-        <div class="badge-floating">Fibre • Mobile • Internet</div>
-      </div>
-    </div>
+    <span class="eyebrow">Casino virtuel · Crédits fictifs</span>
+    <h1>VELOURS</h1>
+    <p>Une roulette européenne à la physique réaliste et une table de blackjack complète avec ses side bets. Vous démarrez avec 10 000 crédits virtuels, rechargeables à tout moment.</p>
   </section>
 
-  <main>
-    <section class="section" id="presentation">
-      <div class="container intro-grid">
-        <div class="panel copy-card">
-          <div class="eyebrow">Présentation</div>
-          <h2>Un acteur majeur du numérique.</h2>
-          <p>Orange est une entreprise française de télécommunications qui permet à chacun de communiquer, de surfer, de travailler et de se divertir plus facilement. Son rôle est essentiel pour les particuliers comme pour les professionnels.</p>
-          <ul class="feature-list">
-            <li>Réseaux mobiles fiables et performants.</li>
-            <li>Internet et fibre pour la maison et le bureau.</li>
-            <li>Services innovants pour les entreprises et les usages du quotidien.</li>
-          </ul>
-        </div>
+  <section class="games" aria-label="Jeux">
+    <article class="game">
+      <a class="cover" href="roulette.html" aria-label="Jouer à la roulette"></a>
+      <div class="game-art roulette">
+        <div class="mini-wheel"></div>
+        <div class="mini-ball"></div>
+      </div>
+      <div class="game-body">
+        <h2>Roulette européenne</h2>
+        <p>Roue en 3D, bille simulée physiquement : elle tourne sur la piste, ralentit, heurte les losanges, rebondit de case en case avant de se poser. Tapis complet et racetrack.</p>
+        <div class="tags"><span>37 cases</span><span>Chevaux, carrés, sixains</span><span>Voisins · Tiers · Orphelins</span><span>Statistiques</span></div>
+        <span class="btn btn-gold">Jouer à la roulette</span>
+      </div>
+    </article>
 
-        <div class="panel visual-card">
-          <div class="globe-wrap" aria-label="Illustration d'un globe Orange">
-            <svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Globe Orange">
-              <defs>
-                <linearGradient id="g1" x1="0" x2="1">
-                  <stop offset="0%" stop-color="#ff9d3d"/>
-                  <stop offset="100%" stop-color="#ff7900"/>
-                </linearGradient>
-              </defs>
-              <circle cx="210" cy="160" r="120" fill="url(#g1)"/>
-              <ellipse cx="210" cy="160" rx="56" ry="120" fill="none" stroke="white" stroke-width="5"/>
-              <line x1="90" y1="160" x2="330" y2="160" stroke="white" stroke-width="5"/>
-              <path d="M90 90 Q210 120 330 90" fill="none" stroke="white" stroke-width="5"/>
-              <path d="M90 230 Q210 200 330 230" fill="none" stroke="white" stroke-width="5"/>
-              <circle cx="210" cy="160" r="12" fill="white" opacity="0.9"/>
-            </svg>
-          </div>
+    <article class="game">
+      <a class="cover" href="blackjack.html" aria-label="Jouer au blackjack"></a>
+      <div class="game-art blackjack">
+        <div class="fan">
+          <div class="pc">A<span>♠</span><b>♠</b></div>
+          <div class="pc r">K<span>♥</span><b>♚</b></div>
+          <div class="chips"><div class="chip" data-v="100"><span>100</span></div><div class="chip" data-v="25"><span>25</span></div></div>
         </div>
       </div>
-    </section>
-
-    <section class="section" id="activites">
-      <div class="container">
-        <div class="eyebrow">Activités</div>
-        <h2>Des services conçus pour tous les usages.</h2>
-        <p>Orange propose des offres de téléphonie, Internet, fibre optique et services numériques pour répondre aux besoins des particuliers comme des entreprises.</p>
-
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon">
-              <svg width="42" height="42" viewBox="0 0 80 80" aria-hidden="true">
-                <rect x="24" y="8" width="32" height="64" rx="8" fill="#ff7900"/>
-                <rect x="28" y="15" width="24" height="44" rx="4" fill="white"/>
-                <circle cx="40" cy="64" r="3" fill="white"/>
-              </svg>
-            </div>
-            <h3>Forfaits mobiles</h3>
-            <p>Appels, SMS, données et couverture pour rester connecté partout.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">
-              <svg width="42" height="42" viewBox="0 0 90 90" aria-hidden="true">
-                <path d="M10 40 Q45 8 80 40" fill="none" stroke="#ff7900" stroke-width="7" stroke-linecap="round"/>
-                <path d="M20 52 Q45 28 70 52" fill="none" stroke="#ff7900" stroke-width="7" stroke-linecap="round"/>
-                <path d="M32 63 Q45 53 58 63" fill="none" stroke="#ff7900" stroke-width="7" stroke-linecap="round"/>
-                <circle cx="45" cy="72" r="6" fill="#ff7900"/>
-              </svg>
-            </div>
-            <h3>Internet &amp; fibre</h3>
-            <p>Une connexion rapide et stable pour le travail, le streaming et la maison.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">
-              <svg width="42" height="42" viewBox="0 0 80 80" aria-hidden="true">
-                <path d="M12 30 L18 12 H62 L68 30 Z" fill="#ff7900"/>
-                <rect x="18" y="30" width="44" height="34" rx="4" fill="#ffb066"/>
-                <rect x="32" y="44" width="16" height="20" fill="white"/>
-              </svg>
-            </div>
-            <h3>Téléphones</h3>
-            <p>Des modèles pensé pour le quotidien, la photo, les jeux ou le travail.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">
-              <svg width="42" height="42" viewBox="0 0 90 90" aria-hidden="true">
-                <rect x="18" y="20" width="26" height="46" fill="#ff7900"/>
-                <rect x="46" y="35" width="24" height="31" fill="#ffb066"/>
-                <rect x="22" y="28" width="6" height="6" fill="white"/>
-                <rect x="32" y="28" width="6" height="6" fill="white"/>
-                <rect x="22" y="42" width="6" height="6" fill="white"/>
-                <rect x="32" y="42" width="6" height="6" fill="white"/>
-                <rect x="52" y="44" width="6" height="6" fill="white"/>
-                <rect x="62" y="44" width="6" height="6" fill="white"/>
-              </svg>
-            </div>
-            <h3>Services pro</h3>
-            <p>Outils, forfaits et solutions conçues pour les entreprises.</p>
-          </div>
-        </div>
+      <div class="game-body">
+        <h2>Blackjack</h2>
+        <p>Sabot de 6 jeux, blackjack payé 3 contre 2, doubler, séparer, assurance et abandon. Quatre side bets et des conseils de stratégie de base.</p>
+        <div class="tags"><span>Perfect Pairs</span><span>21 + 3</span><span>Lucky Ladies</span><span>Bust It</span></div>
+        <span class="btn btn-gold">Jouer au blackjack</span>
       </div>
-    </section>
+    </article>
+  </section>
 
-    <section class="section" id="telephones">
-      <div class="container">
-        <div class="eyebrow">Téléphones 3D</div>
-        <h2>Des modèles imaginés pour une boutique premium.</h2>
-        <p>Cette section est pensée comme un showcase commercial. Les modèles ci-dessous restent des exemples de démonstration afin de garder une présentation visuelle forte, sans reprendre un catalogue officiel.</p>
+  <section class="soon" aria-label="Bientôt">
+    <div><strong>Baccarat</strong>Bientôt disponible</div>
+    <div><strong>Poker Texas Hold'em</strong>Bientôt disponible</div>
+    <div><strong>Machines à sous</strong>Bientôt disponible</div>
+    <div><strong>Craps</strong>Bientôt disponible</div>
+  </section>
 
-        <div class="product-grid">
-          <article class="product-card">
-            <div class="phone-scene" data-color="#ff7900" data-name="Aurore">
-              <div class="mini-phone" style="--g:#ff7900">
-                <div class="mini-face mini-front">
-                  <div class="mini-screen">Aurore</div>
-                  <div class="mini-notch"></div>
-                </div>
-                <div class="mini-face mini-back"><div class="mini-camera"></div></div>
-                <div class="mini-face mini-left"></div>
-                <div class="mini-face mini-right"></div>
-                <div class="mini-face mini-top"></div>
-                <div class="mini-face mini-bottom"></div>
-              </div>
-            </div>
+  <p class="footer-note"><strong>Jeu de démonstration.</strong> Crédits 100 % virtuels, sans aucune valeur monétaire — aucun argent réel n'est misé ni gagné.<br />Le jeu d'argent réel peut créer une dépendance : en France, Joueurs Info Service — 09 74 75 13 13.</p>
 
-            <div class="product-info">
-              <h3>Aurore</h3>
-              <p class="tagline">Le téléphone du quotidien</p>
-              <ul>
-                <li>Idéal pour : appel, SMS et navigation</li>
-                <li>Point fort : simplicité et autonomie</li>
-                <li>Prix : exemple de démonstration</li>
-              </ul>
-              <div class="price-row">
-                <div class="swatches">
-                  <button class="swatch" title="Orange" style="background:#ff7900" data-color="#ff7900"></button>
-                  <button class="swatch" title="Bleu" style="background:#2a6fdb" data-color="#2a6fdb"></button>
-                  <button class="swatch" title="Vert" style="background:#2e9e5b" data-color="#2e9e5b"></button>
-                  <button class="swatch" title="Noir" style="background:#333333" data-color="#333333"></button>
-                </div>
-                <div class="price">29<small>€/mois</small></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="phone-scene" data-color="#2a6fdb" data-name="Zénith">
-              <div class="mini-phone" style="--g:#2a6fdb">
-                <div class="mini-face mini-front">
-                  <div class="mini-screen">Zénith</div>
-                  <div class="mini-notch"></div>
-                </div>
-                <div class="mini-face mini-back"><div class="mini-camera"></div></div>
-                <div class="mini-face mini-left"></div>
-                <div class="mini-face mini-right"></div>
-                <div class="mini-face mini-top"></div>
-                <div class="mini-face mini-bottom"></div>
-              </div>
-            </div>
-
-            <div class="product-info">
-              <h3>Zénith</h3>
-              <p class="tagline">Le téléphone pour la photo</p>
-              <ul>
-                <li>Idéal pour : photos, vidéos et réseaux sociaux</li>
-                <li>Point fort : appareil photo premium</li>
-                <li>Prix : exemple de démonstration</li>
-              </ul>
-              <div class="price-row">
-                <div class="swatches">
-                  <button class="swatch" title="Orange" style="background:#ff7900" data-color="#ff7900"></button>
-                  <button class="swatch" title="Bleu" style="background:#2a6fdb" data-color="#2a6fdb"></button>
-                  <button class="swatch" title="Vert" style="background:#2e9e5b" data-color="#2e9e5b"></button>
-                  <button class="swatch" title="Noir" style="background:#333333" data-color="#333333"></button>
-                </div>
-                <div class="price">39<small>€/mois</small></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="phone-scene" data-color="#2e9e5b" data-name="Lumo">
-              <div class="mini-phone" style="--g:#2e9e5b">
-                <div class="mini-face mini-front">
-                  <div class="mini-screen">Lumo</div>
-                  <div class="mini-notch"></div>
-                </div>
-                <div class="mini-face mini-back"><div class="mini-camera"></div></div>
-                <div class="mini-face mini-left"></div>
-                <div class="mini-face mini-right"></div>
-                <div class="mini-face mini-top"></div>
-                <div class="mini-face mini-bottom"></div>
-              </div>
-            </div>
-
-            <div class="product-info">
-              <h3>Lumo</h3>
-              <p class="tagline">Le téléphone pour les jeux</p>
-              <ul>
-                <li>Idéal pour : jeux, streaming et vidéo</li>
-                <li>Point fort : grand écran et performance</li>
-                <li>Prix : exemple de démonstration</li>
-              </ul>
-              <div class="price-row">
-                <div class="swatches">
-                  <button class="swatch" title="Orange" style="background:#ff7900" data-color="#ff7900"></button>
-                  <button class="swatch" title="Bleu" style="background:#2a6fdb" data-color="#2a6fdb"></button>
-                  <button class="swatch" title="Vert" style="background:#2e9e5b" data-color="#2e9e5b"></button>
-                  <button class="swatch" title="Noir" style="background:#333333" data-color="#333333"></button>
-                </div>
-                <div class="price">49<small>€/mois</small></div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="offres">
-      <div class="container">
-        <div class="eyebrow">Offres</div>
-        <h2>Des formules claires et premium.</h2>
-        <p>Pour une présentation commerciale plus convaincante, voici un exemple d'offres modulables. L'objectif ici est de donner le rendu d'un vrai site de boutique télécom, sans prétendre remplacer le catalogue officiel.</p>
-
-        <div class="pricing">
-          <div class="price-card">
-            <h3>Essentiel</h3>
-            <div class="amount"><strong>19</strong><span>€/mois</span></div>
-            <ul class="benefits">
-              <li>10 Go de données</li>
-              <li>Appels illimités</li>
-              <li>SMS illimités</li>
-              <li>Service client 24/7</li>
-            </ul>
-            <a href="#contact" class="btn btn-secondary" style="background:#f9f9f9; color:#1d232b; border:1px solid rgba(17,24,39,0.08); width:100%;">Choisir</a>
-          </div>
-
-          <div class="price-card featured">
-            <div class="pill">Populaire</div>
-            <h3>Premium</h3>
-            <div class="amount"><strong>39</strong><span>€/mois</span></div>
-            <ul class="benefits">
-              <li>200 Go de données</li>
-              <li>Réseau 5G prioritaire</li>
-              <li>TV et streaming inclus</li>
-              <li>Support prioritaire</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary" style="width:100%;">Choisir</a>
-          </div>
-
-          <div class="price-card">
-            <h3>Pro</h3>
-            <div class="amount"><strong>59</strong><span>€/mois</span></div>
-            <ul class="benefits">
-              <li>Illimité en données</li>
-              <li>Fibre + mobile inclus</li>
-              <li>Boîte de messagerie</li>
-              <li>Solutions business</li>
-            </ul>
-            <a href="#contact" class="btn btn-secondary" style="background:#f9f9f9; color:#1d232b; border:1px solid rgba(17,24,39,0.08); width:100%;">Choisir</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="clients">
-      <div class="container">
-        <div class="eyebrow">Clients</div>
-        <h2>Des offres pensées pour chaque type d'utilisateur.</h2>
-        <p>Orange s’adresse aussi bien aux particuliers qu’aux professionnels. Le besoin principal reste le même : un réseau fiable, un prix lisible et un service de qualité.</p>
-
-        <div class="clients-logos" aria-label="Liste de clients exemples">
-          <div class="logo-box">PARTICULIERS</div>
-          <div class="logo-box">PRO</div>
-          <div class="logo-box">STARTUPS</div>
-          <div class="logo-box">B2B</div>
-          <div class="logo-box">FAMILLES</div>
-        </div>
-
-        <div class="quote">
-          <div class="quote-mark">“</div>
-          <div>
-            <p>La qualité du réseau, la transparence des offres et le service client sont les critères qui comptent vraiment pour un client. Cela donne un vrai avantage concurrentiel.</p>
-            <strong>— Analyse de marché</strong>
-          </div>
-          <div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="final-cta">
-          <div>
-            <h3>Une connectivité claire et premium.</h3>
-            <p>Pour aller plus loin : mobile, fibre, internet, services pro et accompagnement client.</p>
-          </div>
-          <a href="#presentation" class="btn btn-primary" style="background:white; color:var(--orange);">Retour</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <div>
-        <strong style="color:white; font-size:1.2rem;">Orange</strong>
-        <div style="margin-top:8px;">Site réalisé dans le cadre d’une démonstration premium.</div>
-      </div>
-      <div class="footer-links">
-        <a href="#presentation">Présentation</a>
-        <a href="#activites">Activités</a>
-        <a href="#telephones">3D</a>
-        <a href="#offres">Offres</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    const scenes = document.querySelectorAll('.phone-scene');
-
-    scenes.forEach(function(scene) {
-      const phone = scene.querySelector('.mini-phone');
-      let angle = -20;
-      let tilt = 8;
-      let dragging = false;
-      let lastX = 0;
-      let lastY = 0;
-
-      function updateTransform() {
-        phone.style.transform = 'rotateX(' + tilt + 'deg) rotateY(' + angle + 'deg)';
-      }
-
-      function tick() {
-        if (!dragging) {
-          angle += 0.45;
-          updateTransform();
-        }
-        requestAnimationFrame(tick);
-      }
-
-      tick();
-
-      scene.addEventListener('pointerdown', function(e) {
-        dragging = true;
-        lastX = e.clientX;
-        lastY = e.clientY;
-        scene.setPointerCapture(e.pointerId);
-      });
-
-      scene.addEventListener('pointermove', function(e) {
-        if (!dragging) return;
-        const dx = e.clientX - lastX;
-        const dy = e.clientY - lastY;
-        angle += dx * 0.7;
-        tilt -= dy * 0.35;
-        tilt = Math.max(-30, Math.min(30, tilt));
-        lastX = e.clientX;
-        lastY = e.clientY;
-        updateTransform();
-      });
-
-      scene.addEventListener('pointerup', function() {
-        dragging = false;
-      });
-
-      scene.addEventListener('pointerleave', function() {
-        dragging = false;
-      });
-
-      scene.addEventListener('pointercancel', function() {
-        dragging = false;
-      });
-
-      const swatches = scene.parentElement.querySelectorAll('.swatch');
-      swatches.forEach(function(swatch) {
-        swatch.addEventListener('click', function() {
-          const color = swatch.dataset.color;
-          const phoneEl = scene.querySelector('.mini-phone');
-          phoneEl.style.setProperty('--g', color);
-        });
-      });
-    });
-  </script>
-
+  <script src="assets/js/common.js"></script>
+  <script>Casino.mountHeader("lobby");</script>
 </body>
 </html>

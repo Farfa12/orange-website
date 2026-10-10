@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roulette européenne — Velours</title>
+  <meta name="description" content="Roulette européenne en ligne avec roue physique animée, bille réaliste, racetrack et annonces. Crédits virtuels uniquement." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/casino.css" />
+  <link rel="stylesheet" href="assets/css/roulette.css" />
+</head>
+<body>
+  <header data-topbar></header>
+
+  <main class="roulette-page">
+    <!-- ======= Roue ======= -->
+    <section class="wheel-col" aria-label="Roue de roulette">
+      <div class="wheel-stage tilted" id="wheelStage">
+        <div class="wheel-floor"></div>
+        <div class="wheel-tilt">
+          <canvas id="wheel" width="1000" height="1000" aria-label="Roue de roulette européenne animée" role="img"></canvas>
+        </div>
+        <div class="wheel-banner" id="banner" aria-live="polite"></div>
+      </div>
+
+      <div class="wheel-tools">
+        <div class="seg" role="group" aria-label="Vue">
+          <button type="button" data-view="3d" class="on">Vue 3D</button>
+          <button type="button" data-view="2d">Vue de dessus</button>
+        </div>
+        <div class="seg" role="group" aria-label="Vitesse">
+          <button type="button" data-speed="1" class="on">Normal</button>
+          <button type="button" data-speed="1.8">Turbo</button>
+        </div>
+      </div>
+
+      <div class="panel stats">
+        <div class="stats-head">
+          <span class="eyebrow">Derniers numéros</span>
+          <span class="muted" style="font-size:.75rem" id="spinCount"></span>
+        </div>
+        <div class="history" id="history"></div>
+        <div class="bars">
+          <div class="bar" id="barColor"></div>
+          <div class="bar" id="barParity"></div>
+          <div class="bar" id="barHalf"></div>
+        </div>
+        <div class="hotcold">
+          <div><h4 class="hot">Chauds</h4><div class="row" id="hot"></div></div>
+          <div><h4 class="cold">Froids</h4><div class="row" id="cold"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Table ======= -->
+    <section class="table-col" aria-label="Table de mises">
+      <div class="panel status">
+        <div class="status-msg" id="statusMsg">Faites vos jeux</div>
+        <div class="status-kpi"><small>Mise totale</small><strong id="totalBet">0</strong></div>
+        <div class="status-kpi"><small>Dernier gain</small><strong id="lastWin">—</strong></div>
+      </div>
+
+      <div class="felt">
+        <div class="table-scroll">
+          <div class="rtable" id="rtable"></div>
+        </div>
+        <div class="racetrack-wrap table-scroll">
+          <div class="racetrack-head">
+            <span>Racetrack — cliquez un numéro pour jouer ses voisins, ou une zone pour une annonce</span>
+            <div class="seg" role="group" aria-label="Nombre de voisins">
+              <button type="button" data-nb="1">±1</button>
+              <button type="button" data-nb="2" class="on">±2</button>
+              <button type="button" data-nb="3">±3</button>
+            </div>
+          </div>
+          <svg id="racetrack" viewBox="0 0 1000 250" aria-label="Racetrack"></svg>
+        </div>
+      </div>
+
+      <div class="panel controls">
+        <div class="chip-tray" id="chipTray" aria-label="Choix du jeton"></div>
+        <div class="actions">
+          <button class="btn" id="btnUndo" title="Annuler (Ctrl+Z)">Annuler</button>
+          <button class="btn" id="btnClear">Effacer</button>
+          <button class="btn" id="btnRebet">Rejouer</button>
+          <button class="btn" id="btnDouble">×2</button>
+          <button class="btn btn-gold btn-lg spin-btn" id="btnSpin">LANCER <kbd>Espace</kbd></button>
+        </div>
+      </div>
+
+      <p class="help">Clic : poser un jeton · Clic droit (ou appui long) : retirer · Visez les lignes pour les chevaux, transversales, carrés et sixains · <kbd>Espace</kbd> lancer · <kbd>Ctrl</kbd>+<kbd>Z</kbd> annuler</p>
+
+      <details class="panel payout-table">
+        <summary><span>Paiements de la roulette européenne</span><span>▾</span></summary>
+        <table>
+          <tr><td>Plein (1 numéro)</td><td>35 : 1</td></tr>
+          <tr><td>Cheval (2 numéros)</td><td>17 : 1</td></tr>
+          <tr><td>Transversale pleine (3 numéros)</td><td>11 : 1</td></tr>
+          <tr><td>Carré (4 numéros)</td><td>8 : 1</td></tr>
+          <tr><td>Sixain (6 numéros)</td><td>5 : 1</td></tr>
+          <tr><td>Douzaine / Colonne</td><td>2 : 1</td></tr>
+          <tr><td>Rouge/Noir · Pair/Impair · Manque/Passe</td><td>1 : 1</td></tr>
+        </table>
+      </details>
+    </section>
+  </main>
+
+  <p class="footer-note"><strong>Jeu de démonstration.</strong> Crédits 100 % virtuels, sans aucune valeur monétaire — aucun argent réel n'est misé ni gagné.<br />Le jeu d'argent réel peut créer une dépendance : en France, Joueurs Info Service — 09 74 75 13 13.</p>
+
+  <div class="tip" id="tip"></div>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/roulette.js"></script>
+</body>
+</html>
