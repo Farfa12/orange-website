@@ -1,0 +1,176 @@
+{
+  "currentUserId": "u1",
+  "users": [
+    {
+      "id": "u1",
+      "prenom": "Léa",
+      "nom": "Martin",
+      "pseudo": "lea.martin",
+      "avatar": { "initiales": "LM", "couleur": "#10B981" },
+      "ville": "Montauban",
+      "age": 21,
+      "statut": "Étudiante",
+      "bio": "Étudiante en BUT TC à Montauban. Running le matin, padel le week-end, toujours partante pour une rando dans le Quercy.",
+      "sports": [
+        { "sport": "running", "niveau": "intermédiaire" },
+        { "sport": "padel", "niveau": "débutant" },
+        { "sport": "randonnée", "niveau": "intermédiaire" }
+      ],
+      "niveau": "intermédiaire",
+      "verifie": true,
+      "membreDepuis": "2025-09-12",
+      "carte": {
+        "numero": "SC-82-004217",
+        "formule": "Carte Étudiant",
+        "validite": "2027-08-31",
+        "pointsFidelite": 340
+      },
+      "favoris": { "associations": ["a1", "a4"], "evenements": ["e2"] }
+    },
+    {
+      "id": "u2",
+      "prenom": "Thomas",
+      "nom": "Roux",
+      "pseudo": "thomas.r",
+      "avatar": { "initiales": "TR", "couleur": "#0EA5E9" },
+      "ville": "Castelsarrasin",
+      "age": 34,
+      "statut": "Résident local",
+      "bio": "Kiné à Castelsarrasin. Je cours le long du canal trois fois par semaine et je prépare mon premier semi.",
+      "sports": [
+        { "sport": "running", "niveau": "confirmé" },
+        { "sport": "vélo", "niveau": "intermédiaire" }
+      ],
+      "niveau": "confirmé",
+      "verifie": true,
+      "membreDepuis": "2025-03-02"
+    },
+    {
+      "id": "u3",
+      "prenom": "Inès",
+      "nom": "Benali",
+      "pseudo": "ines.b",
+      "avatar": { "initiales": "IB", "couleur": "#F97316" },
+      "ville": "Toulouse",
+      "age": 27,
+      "statut": "Sportive amateur",
+      "bio": "Prof de yoga certifiée, je donne des cours en plein air à la Prairie des Filtres quand la météo le permet.",
+      "sports": [
+        { "sport": "yoga", "niveau": "expert" },
+        { "sport": "randonnée", "niveau": "intermédiaire" }
+      ],
+      "niveau": "expert",
+      "verifie": true,
+      "membreDepuis": "2024-11-20"
+    },
+    {
+      "id": "u4",
+      "prenom": "Julien",
+      "nom": "Fabre",
+      "pseudo": "jujufoot",
+      "avatar": { "initiales": "JF", "couleur": "#8B5CF6" },
+      "ville": "Montauban",
+      "age": 29,
+      "statut": "Sportif occasionnel",
+      "bio": "Foot à 5 le jeudi soir avec les collègues. On cherche souvent un remplaçant, n'hésitez pas !",
+      "sports": [
+        { "sport": "foot à 5", "niveau": "intermédiaire" },
+        { "sport": "padel", "niveau": "intermédiaire" }
+      ],
+      "niveau": "intermédiaire",
+      "verifie": false,
+      "membreDepuis": "2026-01-08"
+    },
+    {
+      "id": "u5",
+      "prenom": "Camille",
+      "nom": "Delmas",
+      "pseudo": "camille.velo",
+      "avatar": { "initiales": "CD", "couleur": "#EC4899" },
+      "ville": "Figeac",
+      "age": 41,
+      "statut": "Résidente locale",
+      "bio": "Cyclotouriste, je connais toutes les petites routes de la vallée du Célé. Sorties tranquilles le dimanche matin.",
+      "sports": [
+        { "sport": "vélo", "niveau": "confirmé" },
+        { "sport": "randonnée", "niveau": "confirmé" }
+      ],
+      "niveau": "confirmé",
+      "verifie": true,
+      "membreDepuis": "2025-05-17"
+    },
+    {
+      "id": "u6",
+      "prenom": "Hugo",
+      "nom": "Vidal",
+      "pseudo": "hugo.trail",
+      "avatar": { "initiales": "HV", "couleur": "#14B8A6" },
+      "ville": "Rodez",
+      "age": 31,
+      "statut": "Sportif amateur",
+      "bio": "Traileur aveyronnais. Je prépare un 40 km pour le printemps, je cherche des partenaires pour les sorties longues.",
+      "sports": [
+        { "sport": "trail", "niveau": "confirmé" },
+        { "sport": "running", "niveau": "confirmé" }
+      ],
+      "niveau": "confirmé",
+      "verifie": true,
+      "membreDepuis": "2025-02-11"
+    },
+    {
+      "id": "u7",
+      "prenom": "Manon",
+      "nom": "Lacombe",
+      "pseudo": "manon.l",
+      "avatar": { "initiales": "ML", "couleur": "#EAB308" },
+      "ville": "Toulouse",
+      "age": 19,
+      "statut": "Étudiante",
+      "bio": "En première année de STAPS à Toulouse. Natation, padel et tout ce qui se joue en équipe.",
+      "sports": [
+        { "sport": "natation", "niveau": "confirmé" },
+        { "sport": "padel", "niveau": "intermédiaire" },
+        { "sport": "volley", "niveau": "intermédiaire" }
+      ],
+      "niveau": "intermédiaire",
+      "verifie": false,
+      "membreDepuis": "2026-09-03"
+    },
+    {
+      "id": "u8",
+      "prenom": "Karim",
+      "nom": "Haddad",
+      "pseudo": "coach.karim",
+      "avatar": { "initiales": "KH", "couleur": "#EF4444" },
+      "ville": "Montauban",
+      "age": 38,
+      "statut": "Coach sportif",
+      "bio": "Coach diplômé d'État (BPJEPS). Préparation physique, remise en forme et circuits training en extérieur.",
+      "sports": [
+        { "sport": "fitness", "niveau": "expert" },
+        { "sport": "running", "niveau": "confirmé" }
+      ],
+      "niveau": "expert",
+      "verifie": true,
+      "membreDepuis": "2024-06-30"
+    },
+    {
+      "id": "u9",
+      "prenom": "Sophie",
+      "nom": "Garrigues",
+      "pseudo": "sophie.vacances",
+      "avatar": { "initiales": "SG", "couleur": "#6366F1" },
+      "ville": "Castelsarrasin",
+      "age": 45,
+      "statut": "Vacancière",
+      "bio": "Lyonnaise en vacances chez ma sœur à Castelsarrasin pour la Toussaint. Je cherche des sorties marche ou vélo sympas.",
+      "sports": [
+        { "sport": "randonnée", "niveau": "débutant" },
+        { "sport": "vélo", "niveau": "débutant" }
+      ],
+      "niveau": "débutant",
+      "verifie": false,
+      "membreDepuis": "2026-10-14"
+    }
+  ]
+}

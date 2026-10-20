@@ -1,0 +1,305 @@
+[
+  {
+    "id": "e1",
+    "titre": "Course des Deux Rives",
+    "type": "course",
+    "sport": "running",
+    "date": "2026-11-15T09:30",
+    "ville": "Toulouse",
+    "lieu": "Départ quai de la Daurade, Toulouse",
+    "coords": {
+      "lat": 43.601,
+      "lng": 1.44
+    },
+    "tarif": 15,
+    "distances": [
+      "5 km",
+      "10 km"
+    ],
+    "organisateurId": null,
+    "places": 1500,
+    "inscrits": 1124,
+    "inscritsIds": [],
+    "description": "Course urbaine le long de la Garonne, deux distances, ravitaillement à mi-parcours et médaille pour tous les finishers.",
+    "sponsorise": false,
+    "organisateur": "Toulouse Running Collectif"
+  },
+  {
+    "id": "e2",
+    "titre": "Trail des Causses Rouergats",
+    "type": "trail",
+    "sport": "trail",
+    "date": "2026-11-22T08:00",
+    "ville": "Rodez",
+    "lieu": "Salle des fêtes, Sainte-Radegonde",
+    "coords": {
+      "lat": 44.336,
+      "lng": 2.609
+    },
+    "tarif": 22,
+    "distances": [
+      "12 km / 350 m D+",
+      "26 km / 900 m D+"
+    ],
+    "organisateurId": "a6",
+    "places": 600,
+    "inscrits": 412,
+    "inscritsIds": [
+      "u6"
+    ],
+    "description": "Trail sur les causses autour de Rodez, chemins caillouteux et passages en sous-bois. Soupe aveyronnaise offerte à l'arrivée.",
+    "sponsorise": false
+  },
+  {
+    "id": "e3",
+    "titre": "La Cyclo du Célé",
+    "type": "cyclosportive",
+    "sport": "vélo",
+    "date": "2027-04-11T08:00",
+    "ville": "Figeac",
+    "lieu": "Place Champollion, Figeac",
+    "coords": {
+      "lat": 44.6085,
+      "lng": 2.031
+    },
+    "tarif": 28,
+    "distances": [
+      "68 km",
+      "112 km"
+    ],
+    "organisateurId": "a5",
+    "places": 800,
+    "inscrits": 156,
+    "inscritsIds": [],
+    "description": "Cyclosportive printanière dans les vallées du Lot et du Célé, deux parcours, routes partiellement fermées à la circulation.",
+    "sponsorise": false
+  },
+  {
+    "id": "e4",
+    "titre": "Tournoi Padel de la Toussaint",
+    "type": "tournoi",
+    "sport": "padel",
+    "date": "2026-10-31T13:00",
+    "ville": "Toulouse",
+    "lieu": "Padel Rive Gauche, Toulouse",
+    "coords": {
+      "lat": 43.5885,
+      "lng": 1.4295
+    },
+    "tarif": 20,
+    "distances": [],
+    "organisateurId": "a2",
+    "places": 32,
+    "inscrits": 26,
+    "inscritsIds": [
+      "u7"
+    ],
+    "description": "Tournoi en double, tableaux débutant et intermédiaire. Tarif par joueur, goûter et lots pour les finalistes.",
+    "sponsorise": true
+  },
+  {
+    "id": "e5",
+    "titre": "Initiation gratuite au trail",
+    "type": "initiation",
+    "sport": "trail",
+    "date": "2026-10-28T14:00",
+    "ville": "Rodez",
+    "lieu": "Parc de Vabre, Rodez",
+    "coords": {
+      "lat": 44.347,
+      "lng": 2.585
+    },
+    "tarif": 0,
+    "distances": [
+      "6 km"
+    ],
+    "organisateurId": "a6",
+    "places": 25,
+    "inscrits": 14,
+    "inscritsIds": [],
+    "description": "Découverte du trail pendant les vacances : technique de montée, descente et gestion de l'effort. Ouvert dès 14 ans.",
+    "sponsorise": false
+  },
+  {
+    "id": "e6",
+    "titre": "Stage multisport vacances de la Toussaint",
+    "type": "stage",
+    "sport": "multisport",
+    "date": "2026-10-26T09:00",
+    "dateFin": "2026-10-30T17:00",
+    "ville": "Castelsarrasin",
+    "lieu": "Complexe sportif, Castelsarrasin",
+    "coords": {
+      "lat": 44.039,
+      "lng": 1.103
+    },
+    "tarif": 95,
+    "distances": [],
+    "organisateurId": "a7",
+    "places": 24,
+    "inscrits": 19,
+    "inscritsIds": [],
+    "description": "Stage de 5 jours pour les 8-14 ans : foot, basket, tir à l'arc, kayak sur le canal. Repas du midi compris.",
+    "sponsorise": false
+  },
+  {
+    "id": "e7",
+    "titre": "Yoga sunset sur les berges",
+    "type": "initiation",
+    "sport": "yoga",
+    "date": "2026-10-24T17:30",
+    "ville": "Toulouse",
+    "lieu": "Prairie des Filtres, Toulouse",
+    "coords": {
+      "lat": 43.5975,
+      "lng": 1.4365
+    },
+    "tarif": 0,
+    "distances": [],
+    "organisateurId": "a3",
+    "places": 40,
+    "inscrits": 33,
+    "inscritsIds": [],
+    "description": "Séance gratuite d'1h au coucher du soleil, tous niveaux. Pensez à une tenue chaude pour la relaxation finale.",
+    "sponsorise": false
+  },
+  {
+    "id": "e8",
+    "titre": "Tournoi Foot à 5 Inter-entreprises",
+    "type": "tournoi",
+    "sport": "foot à 5",
+    "date": "2026-11-07T10:00",
+    "ville": "Montauban",
+    "lieu": "Arena Five Sapiac, Montauban",
+    "coords": {
+      "lat": 44.0105,
+      "lng": 1.346
+    },
+    "tarif": 120,
+    "tarifUnite": "par équipe",
+    "distances": [],
+    "organisateurId": "a4",
+    "places": 16,
+    "inscrits": 11,
+    "inscritsIds": [],
+    "description": "16 équipes de 5 à 7 joueurs, poules le matin et phases finales l'après-midi. Repas et maillots compris.",
+    "sponsorise": true
+  },
+  {
+    "id": "e9",
+    "titre": "Les Foulées du Canal",
+    "type": "course",
+    "sport": "running",
+    "date": "2026-12-06T10:00",
+    "ville": "Castelsarrasin",
+    "lieu": "Port de plaisance, Castelsarrasin",
+    "coords": {
+      "lat": 44.041,
+      "lng": 1.106
+    },
+    "tarif": 10,
+    "distances": [
+      "5 km",
+      "10 km",
+      "Course enfants 1 km"
+    ],
+    "organisateurId": "a7",
+    "places": 500,
+    "inscrits": 187,
+    "inscritsIds": [
+      "u2"
+    ],
+    "description": "Course 100 % plate le long du canal de Garonne, idéale pour un record. Vin chaud et chocolat chaud à l'arrivée.",
+    "sponsorise": false
+  },
+  {
+    "id": "e10",
+    "titre": "Initiation gratuite à l'athlé adultes",
+    "type": "initiation",
+    "sport": "athlétisme",
+    "date": "2026-10-27T18:30",
+    "ville": "Montauban",
+    "lieu": "Stade d'athlétisme, Montauban",
+    "coords": {
+      "lat": 44.0078,
+      "lng": 1.3628
+    },
+    "tarif": 0,
+    "distances": [],
+    "organisateurId": "a1",
+    "places": 30,
+    "inscrits": 12,
+    "inscritsIds": [],
+    "description": "Découvrez sprint, saut en longueur et lancer de poids avec les coachs du club. Aucune expérience requise.",
+    "sponsorise": false
+  },
+  {
+    "id": "e11",
+    "titre": "Rando-Vélo de la Saint-Martin",
+    "type": "cyclosportive",
+    "sport": "vélo",
+    "date": "2026-11-11T09:00",
+    "ville": "Montauban",
+    "lieu": "Place Nationale, Montauban",
+    "coords": {
+      "lat": 44.0172,
+      "lng": 1.3549
+    },
+    "tarif": 8,
+    "distances": [
+      "35 km",
+      "65 km"
+    ],
+    "organisateurId": "a1",
+    "places": 300,
+    "inscrits": 94,
+    "inscritsIds": [],
+    "description": "Randonnée cycliste non chronométrée dans les coteaux du Quercy, ravitaillement avec produits locaux.",
+    "sponsorise": false
+  },
+  {
+    "id": "e12",
+    "titre": "Stage natation perfectionnement",
+    "type": "stage",
+    "sport": "natation",
+    "date": "2026-10-26T18:00",
+    "dateFin": "2026-10-29T19:30",
+    "ville": "Toulouse",
+    "lieu": "Aqua Garonne Club, Toulouse",
+    "coords": {
+      "lat": 43.584,
+      "lng": 1.438
+    },
+    "tarif": 45,
+    "distances": [],
+    "organisateurId": "a8",
+    "places": 16,
+    "inscrits": 9,
+    "inscritsIds": [],
+    "description": "4 séances d'1h30 pour corriger son crawl : analyse vidéo, éducatifs et virages culbute.",
+    "sponsorise": false
+  },
+  {
+    "id": "e13",
+    "titre": "Soirée mêlée padel",
+    "type": "tournoi",
+    "sport": "padel",
+    "date": "2026-10-23T19:30",
+    "ville": "Rodez",
+    "lieu": "Rodez Padel Indoor, Onet-le-Château",
+    "coords": {
+      "lat": 44.365,
+      "lng": 2.595
+    },
+    "tarif": 10,
+    "distances": [],
+    "organisateurId": "a9",
+    "places": 24,
+    "inscrits": 20,
+    "inscritsIds": [
+      "u6"
+    ],
+    "description": "On change de partenaire à chaque match : le meilleur moyen de rencontrer d'autres joueurs de son niveau.",
+    "sponsorise": false
+  }
+]

@@ -1,0 +1,212 @@
+[
+  {
+    "id": "a1",
+    "nom": "Montauban Athlé Passion",
+    "type": "club",
+    "sports": ["running", "athlétisme"],
+    "ville": "Montauban",
+    "adresse": "Avenue du Stade, Montauban",
+    "coords": { "lat": 44.0078, "lng": 1.3628 },
+    "description": "Club d'athlétisme et de course sur route ouvert à tous dès 16 ans : groupes loisir, préparation 10 km et semi-marathon, piste le mardi soir.",
+    "horaires": ["Mardi 18h30 – 20h30 (piste)", "Jeudi 18h30 – 20h (fractionné)", "Dimanche 9h – 11h (sortie longue)"],
+    "tarifs": [
+      { "libelle": "Licence loisir annuelle", "prix": 95 },
+      { "libelle": "Licence étudiant", "prix": 70 },
+      { "libelle": "Séance d'essai", "prix": 0 }
+    ],
+    "avantageCarte": "-15 % sur la licence avec la carte Sport Community",
+    "note": 4.7,
+    "avis": [
+      { "auteur": "Thomas R.", "note": 5, "texte": "Encadrement au top, j'ai gagné 4 minutes sur mon 10 km en une saison.", "date": "2026-09-14" },
+      { "auteur": "Léa M.", "note": 4, "texte": "Groupe loisir très accueillant, on n'est jamais laissé derrière.", "date": "2026-06-02" }
+    ],
+    "reservable": true,
+    "contact": "contact@montauban-athle-passion.fr"
+  },
+  {
+    "id": "a2",
+    "nom": "Padel Rive Gauche",
+    "type": "salle",
+    "sports": ["padel"],
+    "ville": "Toulouse",
+    "adresse": "Chemin de la Garonne, Toulouse",
+    "coords": { "lat": 43.5885, "lng": 1.4295 },
+    "description": "Centre de padel indoor avec 6 terrains panoramiques, location de raquettes, bar et vestiaires. Cours collectifs débutants le week-end.",
+    "horaires": ["Lundi – Vendredi 9h – 23h", "Samedi – Dimanche 8h – 22h"],
+    "tarifs": [
+      { "libelle": "Terrain 1h30 (4 joueurs)", "prix": 48 },
+      { "libelle": "Location raquette", "prix": 3 },
+      { "libelle": "Cours collectif débutant (1h)", "prix": 15 }
+    ],
+    "avantageCarte": "Raquette offerte en location avec la carte",
+    "note": 4.5,
+    "avis": [
+      { "auteur": "Manon L.", "note": 5, "texte": "Terrains impeccables et réservation super simple.", "date": "2026-10-03" },
+      { "auteur": "Julien F.", "note": 4, "texte": "Un peu cher en heures pleines, mais ambiance top.", "date": "2026-08-21" }
+    ],
+    "reservable": true,
+    "contact": "bonjour@padel-rive-gauche.fr"
+  },
+  {
+    "id": "a3",
+    "nom": "Studio Lotus Yoga",
+    "type": "salle",
+    "sports": ["yoga", "pilates"],
+    "ville": "Toulouse",
+    "adresse": "Rue des Lilas, Toulouse",
+    "coords": { "lat": 43.6005, "lng": 1.4520 },
+    "description": "Studio lumineux de 80 m² : hatha, vinyasa, yin et pilates. Petits groupes de 12 personnes maximum, tapis et briques fournis.",
+    "horaires": ["Lundi – Vendredi 7h – 21h", "Samedi 9h – 13h"],
+    "tarifs": [
+      { "libelle": "Cours à l'unité", "prix": 16 },
+      { "libelle": "Carte 10 cours", "prix": 130 },
+      { "libelle": "Abonnement mensuel illimité", "prix": 69 }
+    ],
+    "avantageCarte": "1er cours à 8 € avec la carte",
+    "note": 4.9,
+    "avis": [
+      { "auteur": "Inès B.", "note": 5, "texte": "Mon studio préféré pour le yin du dimanche.", "date": "2026-07-11" },
+      { "auteur": "Sophie G.", "note": 5, "texte": "Très bonne prof, cours adapté à mon mal de dos.", "date": "2026-05-29" }
+    ],
+    "reservable": true,
+    "contact": "studio@lotus-yoga-toulouse.fr"
+  },
+  {
+    "id": "a4",
+    "nom": "Arena Five Sapiac",
+    "type": "salle",
+    "sports": ["foot à 5", "padel"],
+    "ville": "Montauban",
+    "adresse": "Quartier Sapiac, Montauban",
+    "coords": { "lat": 44.0105, "lng": 1.3460 },
+    "description": "Complexe indoor : 4 terrains de foot à 5, 2 terrains de padel, espace anniversaire et retransmission des matchs au bar.",
+    "horaires": ["Lundi – Vendredi 12h – 23h30", "Samedi – Dimanche 10h – 23h"],
+    "tarifs": [
+      { "libelle": "Terrain foot à 5 – 1h", "prix": 70 },
+      { "libelle": "Terrain padel – 1h30", "prix": 40 },
+      { "libelle": "Créneau étudiant (12h-17h)", "prix": 50 }
+    ],
+    "avantageCarte": "-10 € sur le terrain foot à 5 en semaine",
+    "note": 4.3,
+    "avis": [
+      { "auteur": "Julien F.", "note": 4, "texte": "Gazon en bon état, vestiaires propres. Parking parfois plein le jeudi.", "date": "2026-10-09" },
+      { "auteur": "Karim H.", "note": 4, "texte": "Pratique pour les afterworks, équipe sympa.", "date": "2026-04-17" }
+    ],
+    "reservable": true,
+    "contact": "reservation@arenafive-sapiac.fr"
+  },
+  {
+    "id": "a5",
+    "nom": "Cyclo Club du Célé",
+    "type": "club",
+    "sports": ["vélo"],
+    "ville": "Figeac",
+    "adresse": "Allées Victor Hugo, Figeac",
+    "coords": { "lat": 44.6086, "lng": 2.0317 },
+    "description": "Association de cyclotourisme : trois groupes de niveau, sorties route le mercredi et le dimanche, séjours vélo deux fois par an.",
+    "horaires": ["Mercredi 13h30 (sortie 50 km)", "Dimanche 8h30 (sorties 60 à 100 km)"],
+    "tarifs": [
+      { "libelle": "Adhésion annuelle", "prix": 45 },
+      { "libelle": "3 sorties d'essai", "prix": 0 }
+    ],
+    "avantageCarte": "Maillot du club à -50 % pour les nouveaux adhérents",
+    "note": 4.6,
+    "avis": [
+      { "auteur": "Camille D.", "note": 5, "texte": "Des parcours magnifiques et une vraie entraide dans les côtes.", "date": "2026-08-30" }
+    ],
+    "reservable": false,
+    "contact": "contact@cycloclubcele.fr"
+  },
+  {
+    "id": "a6",
+    "nom": "Rouergue Trail Nature",
+    "type": "club",
+    "sports": ["trail", "running", "randonnée"],
+    "ville": "Rodez",
+    "adresse": "Avenue de Paris, Rodez",
+    "coords": { "lat": 44.3506, "lng": 2.5750 },
+    "description": "Club de trail et de course nature : entraînements en côte, sorties découverte des sentiers aveyronnais, organisation du Trail des Causses Rouergats.",
+    "horaires": ["Mercredi 18h30 (côtes)", "Samedi 8h (sortie nature)"],
+    "tarifs": [
+      { "libelle": "Licence trail annuelle", "prix": 85 },
+      { "libelle": "Pass découverte 1 mois", "prix": 15 }
+    ],
+    "avantageCarte": "Pass découverte offert avec la carte",
+    "note": 4.8,
+    "avis": [
+      { "auteur": "Hugo V.", "note": 5, "texte": "Les sorties du samedi sont superbes, on découvre des coins incroyables.", "date": "2026-09-21" },
+      { "auteur": "Thomas R.", "note": 4, "texte": "Exigeant mais bien encadré.", "date": "2026-03-08" }
+    ],
+    "reservable": false,
+    "contact": "contact@rouergue-trail-nature.fr"
+  },
+  {
+    "id": "a7",
+    "nom": "Fit'Castel",
+    "type": "salle",
+    "sports": ["fitness", "musculation"],
+    "ville": "Castelsarrasin",
+    "adresse": "Avenue du Maréchal Leclerc, Castelsarrasin",
+    "coords": { "lat": 44.0400, "lng": 1.1070 },
+    "description": "Salle de sport de quartier : plateau musculation, cardio, cours collectifs (cross training, step, stretching). Ouverte 7j/7 avec badge.",
+    "horaires": ["Tous les jours 6h – 23h (accès badge)", "Accueil : lundi – samedi 9h – 20h"],
+    "tarifs": [
+      { "libelle": "Abonnement mensuel sans engagement", "prix": 29 },
+      { "libelle": "Entrée à la journée", "prix": 8 },
+      { "libelle": "Pass vacances 2 semaines", "prix": 25 }
+    ],
+    "avantageCarte": "Frais d'inscription offerts (35 €)",
+    "note": 4.2,
+    "avis": [
+      { "auteur": "Sophie G.", "note": 4, "texte": "Parfait pour garder le rythme pendant mes vacances.", "date": "2026-07-22" },
+      { "auteur": "Thomas R.", "note": 4, "texte": "Matériel récent, un peu de monde à 18h.", "date": "2026-02-13" }
+    ],
+    "reservable": true,
+    "contact": "accueil@fitcastel.fr"
+  },
+  {
+    "id": "a8",
+    "nom": "Aqua Garonne Club",
+    "type": "club",
+    "sports": ["natation", "aquagym"],
+    "ville": "Toulouse",
+    "adresse": "Allée de l'île du Ramier, Toulouse",
+    "coords": { "lat": 43.5840, "lng": 1.4380 },
+    "description": "Club de natation adultes : perfectionnement des 4 nages, préparation triathlon, aquagym en soirée. Créneaux en bassin de 50 m.",
+    "horaires": ["Lundi et mercredi 20h – 21h30", "Vendredi 12h – 13h30", "Samedi 9h – 10h30"],
+    "tarifs": [
+      { "libelle": "Adhésion annuelle adulte", "prix": 160 },
+      { "libelle": "Adhésion étudiant", "prix": 110 },
+      { "libelle": "Séance aquagym à l'unité", "prix": 9 }
+    ],
+    "avantageCarte": "-20 € sur l'adhésion annuelle",
+    "note": 4.4,
+    "avis": [
+      { "auteur": "Manon L.", "note": 5, "texte": "Coachs pédagogues, j'ai enfin un vrai crawl.", "date": "2026-10-01" }
+    ],
+    "reservable": true,
+    "contact": "contact@aquagaronneclub.fr"
+  },
+  {
+    "id": "a9",
+    "nom": "Rodez Padel Indoor",
+    "type": "salle",
+    "sports": ["padel"],
+    "ville": "Rodez",
+    "adresse": "Zone de Bel Air, Onet-le-Château",
+    "coords": { "lat": 44.3650, "lng": 2.5950 },
+    "description": "Trois terrains couverts, éclairage LED, matériel en location. Soirées « mêlée » le vendredi pour rencontrer d'autres joueurs.",
+    "horaires": ["Lundi – Vendredi 10h – 23h", "Week-end 9h – 21h"],
+    "tarifs": [
+      { "libelle": "Terrain 1h30", "prix": 36 },
+      { "libelle": "Soirée mêlée (par joueur)", "prix": 10 }
+    ],
+    "avantageCarte": "Soirée mêlée à 7 € avec la carte",
+    "note": 4.6,
+    "avis": [
+      { "auteur": "Hugo V.", "note": 5, "texte": "Les soirées mêlée sont géniales pour trouver des partenaires.", "date": "2026-09-05" }
+    ],
+    "reservable": true,
+    "contact": "contact@rodezpadelindoor.fr"
+  }
+]
