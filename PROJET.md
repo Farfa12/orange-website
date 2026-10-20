@@ -23,7 +23,8 @@ Vite + React + Tailwind CSS + react-router-dom + lucide-react + qrcode.react.
 
 ## Contenu
 - Interface **100 % en français**.
-- Données réalistes — villes : **Castelsarrasin, Montauban, Toulouse, Figeac, Rodez** ; clubs et sponsors fictifs.
+- Villes : **Castelsarrasin, Montauban, Toulouse, Figeac, Rodez**.
+- Lieux, associations et événements = données RÉELLES et sourcées (source_url + date_collecte, null si introuvable). Utilisateurs, messages, annonces, groupes, offres sponsors, réservations = FICTIFS, assumés comme tels dans l'UI.
 - **Pas de lorem ipsum.**
 
 ## Accessibilité
