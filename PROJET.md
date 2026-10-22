@@ -54,3 +54,27 @@ Le **profil** s'ouvre via l'avatar en haut à droite.
 - **« Frais de service »** affichés dans les réservations.
 - Page vitrine **« Espace Associations & Pros »**.
 - **« Annonce mise en avant »** affichée **« Bientôt disponible »**.
+
+## État d'avancement (22/10/2026)
+
+**Fait hors ligne** : l'app complète (4 onglets, fiches, formulaires, messagerie, réservation et pass simulés, profil, À propos, Espace Associations & Pros), l'état global (`AppContext`, persistance localStorage) et le validateur `sport-community/scripts/validate.mjs` (`npm run validate`).
+
+**Données** : toutes les données « réelles » sont pour l'instant des **gabarits de démonstration** (`"demo": true`, nom préfixé `[DÉMO]`, champs réels à `null`, affichés « Non renseigné »). Aucune donnée réelle n'a été collectée : l'accès réseau du conteneur est bloqué.
+
+## Reste à collecter (dès que l'accès réseau fonctionne)
+
+Remplacer les entrées `[DÉMO]` de `src/data/associations.json`, `equipements.json` et `events.json` par des données réelles (`"demo": false`, `source`, `source_url`, `date_collecte`), puis lancer `npm run validate` (0 erreur attendue) et le contrôle par échantillon.
+
+| Fichier | Volume visé | Source principale | Champs probablement `null` |
+|---|---|---|---|
+| `equipements.json` | 5 à 10 par ville | Data ES – « Recensement des équipements sportifs, espaces et sites de pratiques » (ministère des Sports) : https://www.data.gouv.fr/datasets/recensement-des-equipements-sportifs-espaces-et-sites-de-pratiques-2 · API : equipements.sports.gouv.fr | — |
+| `associations.json` | 6 à 10 par ville (Toulouse : 10 max, sports variés) | API recherche-entreprises (recherche-entreprises.api.gouv.fr, filtre associations, code NAF 93.12Z « Activités de clubs de sports ») ; à défaut, le RNA : https://www.data.gouv.fr/datasets/repertoire-national-des-associations · Compléments : OpenStreetMap via Overpass (`leisure=sports_centre`, `leisure=fitness_centre`, `leisure=pitch`) pour le site web et le téléphone | horaires, tarifs, téléphone, site web |
+| `events.json` | Tous les événements réels trouvés, datés après le 20/10/2026, sans remplissage | Sites officiels des organisateurs, des mairies et des offices de tourisme (Montauban, Castelsarrasin, Toulouse, Figeac, Rodez), calendrier de la Fédération française d'athlétisme | tarif, lieu précis |
+
+**Codes INSEE des 5 villes** : à confirmer via geo.api.gouv.fr avant la collecte (ne pas les saisir de mémoire).
+
+**Domaines à autoriser** dans l'environnement : `www.data.gouv.fr`, `static.data.gouv.fr`, `equipements.sports.gouv.fr`, `recherche-entreprises.api.gouv.fr`, `geo.api.gouv.fr`, `overpass-api.de`, ainsi que les sites des clubs, mairies et organisateurs. Pour ces derniers, inconnus à l'avance, l'accès complet est plus simple.
+
+**Règles de collecte** : scripts dans `/scripts`, réponses brutes dans `/data-raw`, User-Agent explicite et respect des limites d'usage d'Overpass. Aucune donnée personnelle (pas de dirigeants, pas d'adresses de particuliers). Les fiches gardent « Pas encore d'avis » : il n'y a pas de champ `avis`.
+
+**Après la collecte** : supprimer les réservations de démo qui pointent vers des structures `demo-*` (ou les rattacher à des structures réelles avec la mention « Réservation simulée »), puis créer `SOURCES.md` (sources, dates, points non vérifiés, résultat du contrôle par échantillon).

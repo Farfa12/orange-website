@@ -23,7 +23,7 @@ export default function BottomNav() {
               className={({ isActive }) =>
                 `flex min-h-[60px] flex-col items-center justify-center gap-1 px-1 text-center text-[11px] font-medium leading-tight transition-colors ${
                   isActive
-                    ? 'text-primary-dark dark:text-primary'
+                    ? 'text-emerald-700 dark:text-emerald-400'
                     : 'text-slate-500 hover:text-night dark:text-slate-400 dark:hover:text-white'
                 }`
               }

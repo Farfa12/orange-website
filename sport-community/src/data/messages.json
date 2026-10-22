@@ -1,74 +1,80 @@
 [
   {
     "id": "c1",
+    "demo": true,
     "type": "groupe",
     "groupId": "g1",
-    "titre": "Les Foulées du Tescou",
+    "titre": "Running du dimanche – Montauban",
     "participants": ["u1", "u4", "u8"],
     "messages": [
-      { "id": "m1", "auteurId": "u8", "texte": "Salut l'équipe ! Samedi 9h au cours Foucault pour la boucle des berges, 10 km tranquilles.", "date": "2026-10-19T18:02" },
-      { "id": "m2", "auteurId": "u4", "texte": "Présent ! Par contre je serai plutôt sur du 6'00, j'ai joué au five jeudi 😅", "date": "2026-10-19T18:15" },
-      { "id": "m3", "auteurId": "u1", "texte": "Je viens aussi, je peux courir avec toi Julien.", "date": "2026-10-19T19:40" },
-      { "id": "m4", "auteurId": "u8", "texte": "Parfait. Pensez à une frontale si on traîne au café après, il fait nuit tôt maintenant !", "date": "2026-10-20T07:55" }
+      { "id": "m1", "auteurId": "u8", "texte": "Salut l'équipe ! Dimanche 9h, 10 km tranquilles. Rendez-vous habituel.", "date": "2026-10-21T18:02" },
+      { "id": "m2", "auteurId": "u4", "texte": "Présent ! Par contre je serai plutôt sur du 6'00, j'ai joué au five jeudi 😅", "date": "2026-10-21T18:15" },
+      { "id": "m3", "auteurId": "u1", "texte": "Je viens aussi, je peux courir avec toi Julien.", "date": "2026-10-21T19:40" },
+      { "id": "m4", "auteurId": "u8", "texte": "Parfait. Pensez à une frontale si on traîne au café après, il fait nuit tôt maintenant !", "date": "2026-10-22T07:55" }
     ]
   },
   {
     "id": "c2",
+    "demo": true,
     "type": "groupe",
     "groupId": "g6",
-    "titre": "Randos du Quercy",
+    "titre": "Randos entre amis – Castelsarrasin",
     "participants": ["u1", "u2", "u9"],
     "messages": [
-      { "id": "m5", "auteurId": "u2", "texte": "Rando des coteaux de Moissac confirmée pour le 1er novembre, 14 km et environ 300 m de dénivelé.", "date": "2026-10-17T20:30" },
-      { "id": "m6", "auteurId": "u9", "texte": "Bonjour à tous ! Je suis en vacances à Castel, c'est faisable pour une débutante ?", "date": "2026-10-18T10:12" },
-      { "id": "m7", "auteurId": "u2", "texte": "Oui sans souci Sophie, on fait des pauses régulières. Prévoyez de bonnes chaussures, ça peut glisser s'il a plu.", "date": "2026-10-18T10:30" },
-      { "id": "m8", "auteurId": "u1", "texte": "J'ai mis une annonce de covoit' depuis Montauban si ça intéresse quelqu'un.", "date": "2026-10-18T12:05" }
+      { "id": "m5", "auteurId": "u2", "texte": "Rando confirmée pour le 1er novembre, 14 km et environ 300 m de dénivelé.", "date": "2026-10-19T20:30" },
+      { "id": "m6", "auteurId": "u9", "texte": "Bonjour à tous ! Je suis en vacances à Castel, c'est faisable pour une débutante ?", "date": "2026-10-20T10:12" },
+      { "id": "m7", "auteurId": "u2", "texte": "Oui sans souci Sophie, on fait des pauses régulières. Prévoyez de bonnes chaussures, ça peut glisser s'il a plu.", "date": "2026-10-20T10:30" },
+      { "id": "m8", "auteurId": "u1", "texte": "J'ai mis une annonce de covoit' depuis Montauban si ça intéresse quelqu'un.", "date": "2026-10-20T12:05" }
     ]
   },
   {
     "id": "c3",
+    "demo": true,
     "type": "groupe",
     "groupId": "g3",
-    "titre": "Padel Débutants Toulouse",
+    "titre": "Padel débutants – Toulouse",
     "participants": ["u1", "u7"],
     "messages": [
-      { "id": "m9", "auteurId": "u7", "texte": "Deux terrains réservés samedi 14h ! Il reste 3 places.", "date": "2026-10-19T09:00" },
-      { "id": "m10", "auteurId": "u1", "texte": "Je prends une place, je n'ai pas de raquette par contre.", "date": "2026-10-19T09:48" },
-      { "id": "m11", "auteurId": "u7", "texte": "Pas de souci, le club en prête. Et avec la carte Sport Community la location est offerte 👌", "date": "2026-10-19T10:02" }
+      { "id": "m9", "auteurId": "u7", "texte": "Deux terrains réservés samedi 14h ! Il reste 3 places.", "date": "2026-10-21T09:00" },
+      { "id": "m10", "auteurId": "u1", "texte": "Je prends une place, je n'ai pas de raquette par contre.", "date": "2026-10-21T09:48" },
+      { "id": "m11", "auteurId": "u7", "texte": "Pas de souci, on peut en louer sur place, et j'en ai une de rechange au pire 👌", "date": "2026-10-21T10:02" }
     ]
   },
   {
     "id": "c4",
+    "demo": true,
     "type": "prive",
     "groupId": null,
     "titre": null,
     "participants": ["u1", "u8"],
     "messages": [
       { "id": "m12", "auteurId": "u1", "texte": "Bonjour Karim, je suis intéressée par la séance de coaching offerte. Vous avez des créneaux le mercredi ?", "date": "2026-10-15T14:20" },
-      { "id": "m13", "auteurId": "u8", "texte": "Bonjour Léa ! Oui, mercredi 17h ou 18h au Jardin des Plantes. On commence par un petit bilan.", "date": "2026-10-15T15:02" },
+      { "id": "m13", "auteurId": "u8", "texte": "Bonjour Léa ! Oui, mercredi 17h ou 18h en extérieur. On commence par un petit bilan.", "date": "2026-10-15T15:02" },
       { "id": "m14", "auteurId": "u1", "texte": "17h c'est parfait, merci !", "date": "2026-10-15T15:10" },
-      { "id": "m15", "auteurId": "u8", "texte": "Noté pour mercredi 21. Prévois une tenue confortable et de l'eau.", "date": "2026-10-15T15:12" }
+      { "id": "m15", "auteurId": "u8", "texte": "Noté pour mercredi 28. Prévois une tenue confortable et de l'eau.", "date": "2026-10-15T15:12" }
     ]
   },
   {
     "id": "c5",
+    "demo": true,
     "type": "prive",
     "groupId": null,
     "titre": null,
     "participants": ["u1", "u5"],
     "messages": [
-      { "id": "m16", "auteurId": "u1", "texte": "Bonjour Camille, le vélo de route est toujours disponible ? Je fais 1m72.", "date": "2026-10-19T17:30" },
-      { "id": "m17", "auteurId": "u5", "texte": "Bonjour ! Oui toujours dispo, la taille M devrait vous aller. Vous pouvez venir l'essayer à Figeac ce week-end.", "date": "2026-10-19T18:45" }
+      { "id": "m16", "auteurId": "u1", "texte": "Bonjour Camille, le vélo de route est toujours disponible ? Je fais 1m72.", "date": "2026-10-21T17:30" },
+      { "id": "m17", "auteurId": "u5", "texte": "Bonjour ! Oui toujours dispo, la taille M devrait vous aller. Vous pouvez venir l'essayer à Figeac ce week-end.", "date": "2026-10-21T18:45" }
     ]
   },
   {
     "id": "c6",
+    "demo": true,
     "type": "prive",
     "groupId": null,
     "titre": null,
     "participants": ["u1", "u4"],
     "messages": [
-      { "id": "m18", "auteurId": "u4", "texte": "Léa, tu connais quelqu'un qui pourrait dépanner jeudi pour le five ? Il nous manque un joueur.", "date": "2026-10-20T08:50" }
+      { "id": "m18", "auteurId": "u4", "texte": "Léa, tu connais quelqu'un qui pourrait dépanner jeudi prochain pour le five ? Il nous manque un joueur.", "date": "2026-10-22T08:50" }
     ]
   }
 ]

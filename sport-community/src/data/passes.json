@@ -1,0 +1,44 @@
+{
+  "demo": true,
+  "catalogue": [
+    {
+      "id": "p-jour",
+      "demo": true,
+      "nom": "Pass 1 jour",
+      "description": "Accès d'une journée à une structure partenaire au choix. Idéal pour les vacanciers.",
+      "prix": 9,
+      "seances": 1,
+      "dureeValiditeJours": 1
+    },
+    {
+      "id": "p-10",
+      "demo": true,
+      "nom": "Pass 10 séances",
+      "description": "10 entrées utilisables dans les structures partenaires, valables 6 mois.",
+      "prix": 79,
+      "seances": 10,
+      "dureeValiditeJours": 180
+    },
+    {
+      "id": "p-vacances",
+      "demo": true,
+      "nom": "Pass Vacances 7 jours",
+      "description": "Une semaine d'accès illimité aux structures partenaires de la ville de votre choix.",
+      "prix": 35,
+      "seances": null,
+      "dureeValiditeJours": 7
+    }
+  ],
+  "mesPass": [
+    {
+      "id": "mp1",
+      "demo": true,
+      "passId": "p-10",
+      "userId": "u1",
+      "achatLe": "2026-09-05",
+      "expireLe": "2027-03-04",
+      "seancesRestantes": 7,
+      "qr": "DEMO-PASS-u1-mp1"
+    }
+  ]
+}

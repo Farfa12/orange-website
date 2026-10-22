@@ -1,0 +1,57 @@
+[
+  {
+    "id": "demo-eq1",
+    "demo": true,
+    "nom": "[DÉMO] Piste d'athlétisme",
+    "type": "Piste d'athlétisme",
+    "adresse": null,
+    "commune": "Montauban",
+    "source": null,
+    "source_url": null,
+    "date_collecte": null
+  },
+  {
+    "id": "demo-eq2",
+    "demo": true,
+    "nom": "[DÉMO] Bassin de natation",
+    "type": "Bassin de natation",
+    "adresse": null,
+    "commune": "Toulouse",
+    "source": null,
+    "source_url": null,
+    "date_collecte": null
+  },
+  {
+    "id": "demo-eq3",
+    "demo": true,
+    "nom": "[DÉMO] Terrain de football",
+    "type": "Terrain de football",
+    "adresse": null,
+    "commune": "Castelsarrasin",
+    "source": null,
+    "source_url": null,
+    "date_collecte": null
+  },
+  {
+    "id": "demo-eq4",
+    "demo": true,
+    "nom": "[DÉMO] Court de tennis",
+    "type": "Court de tennis",
+    "adresse": null,
+    "commune": "Figeac",
+    "source": null,
+    "source_url": null,
+    "date_collecte": null
+  },
+  {
+    "id": "demo-eq5",
+    "demo": true,
+    "nom": "[DÉMO] Salle multisports",
+    "type": "Salle multisports",
+    "adresse": null,
+    "commune": "Rodez",
+    "source": null,
+    "source_url": null,
+    "date_collecte": null
+  }
+]

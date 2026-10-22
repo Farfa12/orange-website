@@ -1,0 +1,76 @@
+{
+  "demo": true,
+  "fraisServicePourcentage": 5,
+  "fraisServiceMinimum": 0.99,
+  "prestationsDemo": [
+    {
+      "id": "pr-decouverte",
+      "libelle": "Séance découverte",
+      "prix": 0
+    },
+    {
+      "id": "pr-creneau",
+      "libelle": "Créneau d'1 heure",
+      "prix": 12
+    },
+    {
+      "id": "pr-terrain",
+      "libelle": "Terrain 1h30 (4 personnes)",
+      "prix": 40
+    }
+  ],
+  "reservations": [
+    {
+      "id": "b1",
+      "demo": true,
+      "userId": "u1",
+      "structureId": "demo-a3",
+      "prestation": "Terrain 1h30 (4 personnes)",
+      "date": "2026-10-31T14:00",
+      "prix": 40,
+      "fraisService": 2.0,
+      "total": 42.0,
+      "statut": "confirmee",
+      "qr": "DEMO-RES-b1"
+    },
+    {
+      "id": "b2",
+      "demo": true,
+      "userId": "u1",
+      "structureId": "demo-a1",
+      "prestation": "Séance découverte",
+      "date": "2026-11-03T18:30",
+      "prix": 0,
+      "fraisService": 0,
+      "total": 0,
+      "statut": "confirmee",
+      "qr": "DEMO-RES-b2"
+    },
+    {
+      "id": "b3",
+      "demo": true,
+      "userId": "u1",
+      "structureId": "demo-a4",
+      "prestation": "Créneau d'1 heure",
+      "date": "2026-11-08T10:00",
+      "prix": 12,
+      "fraisService": 0.99,
+      "total": 12.99,
+      "statut": "confirmee",
+      "qr": "DEMO-RES-b3"
+    },
+    {
+      "id": "b4",
+      "demo": true,
+      "userId": "u1",
+      "structureId": "demo-a2",
+      "prestation": "Terrain 1h30 (4 personnes)",
+      "date": "2026-10-10T19:00",
+      "prix": 40,
+      "fraisService": 2.0,
+      "total": 42.0,
+      "statut": "passee",
+      "qr": "DEMO-RES-b4"
+    }
+  ]
+}
